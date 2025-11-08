@@ -1,3 +1,46 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "A well-lit butcher shop with various cuts of meat on display.",
+      "imageUrl": "https://images.unsplash.com/photo-1625643269470-5d3e7b69fa34?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXRjaGVyJTIwc2hvcHxlbnwwfHx8fDE3NjI2MTM2NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "butcher shop"
+    },
+    {
+      "id": "beef-steak",
+      "description": "A thick, juicy beef steak grilled to perfection.",
+      "imageUrl": "https://images.unsplash.com/photo-1630071074184-a879a29c51bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YmVlZiUyMHN0ZWFrfGVufDB8fHx8MTc2MjU5MTcwOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "beef steak"
+    },
+    {
+      "id": "chicken-wings",
+      "description": "A plate of crispy, golden-brown chicken wings.",
+      "imageUrl": "https://images.unsplash.com/photo-1608039755401-742074f0548d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjaGlja2VuJTIwd2luZ3N8ZW58MHx8fHwxNzYyNjEzNjUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chicken wings"
+    },
+    {
+      "id": "pork-chops",
+      "description": "Grilled pork chops with herbs and spices.",
+      "imageUrl": "https://images.unsplash.com/photo-1659275798347-d8e9000c388c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwb3JrJTIwY2hvcHN8ZW58MHx8fHwxNzYyNjEzNjUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pork chops"
+    },
+    {
+      "id": "salmon-fillet",
+      "description": "A fresh salmon fillet with lemon and dill.",
+      "imageUrl": "https://images.unsplash.com/photo-1625229466790-62bae5ab4ff4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzYWxtb24lMjBmaWxsZXR8ZW58MHx8fHwxNzYyNTkxNzA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "salmon fillet"
+    },
+    {
+      "id": "ground-beef",
+      "description": "A mound of fresh ground beef, ready for cooking.",
+      "imageUrl": "https://images.unsplash.com/photo-1758994092686-d62712ac51ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxncm91bmQlMjBiZWVmfGVufDB8fHx8MTc2MjU5ODk1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ground beef"
+    },
+    {
+      "id": "lamb-rack",
+      "description": "An elegant rack of lamb, roasted with garlic and rosemary.",
+      "imageUrl": "https://images.unsplash.com/photo-1610359798001-3e0cd6c8faab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxsYW1iJTIwcmFja3xlbnwwfHx8fDE3NjI2MTM2NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "lamb rack"
+    }
+  ]
 }
