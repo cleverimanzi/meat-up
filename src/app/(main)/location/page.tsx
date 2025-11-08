@@ -27,7 +27,7 @@ export default function LocationPage() {
           <div className="border-t pt-6 space-y-4">
             <div className="flex items-center gap-4">
               <Mail className="h-5 w-5 text-primary"/>
-              <span>support@meatup.com</span>
+              <span>japetimanzi@gmail.com</span>
             </div>
             <div className="flex items-center gap-4">
               <Phone className="h-5 w-5 text-primary"/>
