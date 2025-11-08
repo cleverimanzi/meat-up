@@ -48,9 +48,9 @@ export default function Header() {
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-medium md:flex group">
           <NavLink href="/dashboard">Home</NavLink>
-          <NavLink href="/about">About Us</NavLink>
-          <NavLink href="/contact">Contact</NavLink>
-          <NavLink href="/admin">Admin</NavLink>
+          <NavLink href="/about">About</NavLink>
+          <NavLink href="/products">Product</NavLink>
+          <NavLink href="/location">Location</NavLink>
         </nav>
         <div className="ml-auto flex items-center gap-4">
           {user ? (
