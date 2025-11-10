@@ -4,7 +4,7 @@ import { getFirestore } from "firebase/firestore";
 import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDjCRNfIvD5X_l4wOoPTif1WbeyfsJMuf4",
+  apiKey: "AIzaSyAh92mQ4BvB9A5fQ_kEwJ6sRzO8cY_hI4",
   authDomain: "meat-shop-ece1d.firebaseapp.com",
   projectId: "meat-shop-ece1d",
   storageBucket: "meat-shop-ece1d.appspot.com",
