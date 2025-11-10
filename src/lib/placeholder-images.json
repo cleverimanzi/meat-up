@@ -53,12 +53,6 @@
       "description": "A raw whole chicken prepared for roasting.",
       "imageUrl": "https://images.unsplash.com/photo-1604503468506-a8da13d82791?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyYXclMjBjaGlja2VufGVufDB8fHx8MTc2MjY5MTQ4Nnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "raw chicken"
-    },
-    {
-      "id": "rabbit-meat",
-      "description": "Raw rabbit meat portions on a surface.",
-      "imageUrl": "https://images.unsplash.com/photo-1746329057371-b360834e31f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxyYWJiaXQlMjBtZWF0fGVufDB8fHx8MTc2Mjc3NjA3OHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "rabbit meat"
     }
   ]
 }

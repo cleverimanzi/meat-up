@@ -57,11 +57,4 @@ export const products: Product[] = [
     price: 14.0,
     imageId: 'whole-chicken',
   },
-  {
-    id: 'prod_010',
-    name: 'Rabbit Meat',
-    description: 'Lean and tender rabbit meat, a great alternative to chicken.',
-    price: 22.0,
-    imageId: 'rabbit-meat',
-  },
 ];
