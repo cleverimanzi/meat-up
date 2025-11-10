@@ -1,6 +1,7 @@
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState } from 'react';
+import { useFormStatus } from 'react-dom';
 import { handleMeatSearch } from '@/app/(main)/dashboard/actions';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
@@ -18,7 +19,7 @@ function SubmitButton() {
 }
 
 export default function AiMeatSearch() {
-  const [state, formAction] = useFormState(handleMeatSearch, { suggestions: [], error: null });
+  const [state, formAction] = useActionState(handleMeatSearch, { suggestions: [], error: null });
 
   return (
     <Card>
