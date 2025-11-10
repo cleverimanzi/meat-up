@@ -44,13 +44,6 @@ export const products: Product[] = [
     imageId: 'lamb-rack',
   },
   {
-    id: 'prod_007',
-    name: 'Cow Meat Cuts',
-    description: 'A selection of various beef cuts, perfect for a variety of dishes.',
-    price: 18.5,
-    imageId: 'cow-meat',
-  },
-  {
     id: 'prod_008',
     name: 'Fresh Goat Meat',
     description: 'Tender and flavorful goat meat, perfect for curries and stews.',
