@@ -20,7 +20,7 @@ export default function ContactPage() {
             </div>
             <div className="flex items-center gap-4">
               <Phone className="h-5 w-5 text-primary"/>
-              <span>1-800-MEAT-UPP</span>
+              <span>+250780104812</span>
             </div>
              <div className="flex items-center gap-4">
                 <MapPin className="h-5 w-5 text-primary"/>
