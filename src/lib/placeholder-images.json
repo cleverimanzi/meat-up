@@ -8,27 +8,27 @@
     },
     {
       "id": "beef-steak",
-      "description": "A thick, juicy beef steak grilled to perfection.",
-      "imageUrl": "https://images.unsplash.com/photo-1630071074184-a879a29c51bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YmVlZiUyMHN0ZWFrfGVufDB8fHx8MTc2MjU5MTcwOHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "beef steak"
+      "description": "A thick, raw beef steak ready for cooking.",
+      "imageUrl": "https://images.unsplash.com/photo-1603048256381-355835c249a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBiZWVmJTIwc3RlYWt8ZW58MHx8fHwxNzYzNTM0MTcxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "raw beef steak"
     },
     {
       "id": "chicken-wings",
-      "description": "A plate of crispy, golden-brown chicken wings.",
-      "imageUrl": "https://images.unsplash.com/photo-1608039755401-742074f0548d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjaGlja2VuJTIwd2luZ3N8ZW58MHx8fHwxNzYyNjEzNjUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "chicken wings"
+      "description": "A plate of fresh, raw chicken wings.",
+      "imageUrl": "https://images.unsplash.com/photo-1587593810167-a84920ea0781?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBjaGlja2VuJTIwd2luZ3N8ZW58MHx8fHwxNzYzNTM0MjYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "raw chicken wings"
     },
     {
       "id": "pork-chops",
-      "description": "Grilled pork chops with herbs and spices.",
-      "imageUrl": "https://images.unsplash.com/photo-1659275798347-d8e9000c388c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwb3JrJTIwY2hvcHN8ZW58MHx8fHwxNzYyNjEzNjUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "pork chops"
+      "description": "Raw pork chops ready to be cooked.",
+      "imageUrl": "https://images.unsplash.com/photo-1606842349024-5d9b0a1a4a1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBwb3JrJTIwY2hvcHN8ZW58MHx8fHwxNzYzNTM0MzE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "raw pork chops"
     },
     {
       "id": "salmon-fillet",
-      "description": "A fresh salmon fillet with lemon and dill.",
-      "imageUrl": "https://images.unsplash.com/photo-1625229466790-62bae5ab4ff4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzYWxtb24lMjBmaWxsZXR8ZW58MHx8fHwxNzYyNTkxNzA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "salmon fillet"
+      "description": "A fresh raw salmon fillet.",
+      "imageUrl": "https://images.unsplash.com/photo-1559058789-2e51271b4a64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBzYWxtb24lMjBmaWxsZXR8ZW58MHx8fHwxNzYzNTM0MzYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "raw salmon fillet"
     },
     {
       "id": "goat-meat",
