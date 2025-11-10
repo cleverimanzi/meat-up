@@ -59,7 +59,7 @@ export const products: Product[] = [
   },
   {
     id: 'prod_010',
-    name: 'Assorted Cow Cuts',
+    name: 'Cow Meat',
     description: 'A selection of various cuts of high-quality cow meat.',
     price: 18.5,
     imageId: 'cow-meat',
