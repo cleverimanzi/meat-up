@@ -38,7 +38,7 @@ export const products: Product[] = [
   },
   {
     id: 'prod_006',
-    name 'French-Trimmed Lamb Rack',
+    name: 'French-Trimmed Lamb Rack',
     description: 'An impressive and delicious centerpiece for any special occasion.',
     price: 35.0,
     imageId: 'lamb-rack',
