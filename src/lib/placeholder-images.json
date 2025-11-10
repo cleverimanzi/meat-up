@@ -37,12 +37,6 @@
       "imageHint": "ground beef"
     },
     {
-      "id": "lamb-rack",
-      "description": "An elegant rack of lamb, roasted with garlic and rosemary.",
-      "imageUrl": "https://images.unsplash.com/photo-1610359798001-3e0cd6c8faab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxsYW1iJTIwcmFja3xlbnwwfHx8fDE3NjI2MTM2NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "lamb rack"
-    },
-    {
       "id": "goat-meat",
       "description": "Cubes of raw goat meat ready for cooking.",
       "imageUrl": "https://images.unsplash.com/photo-1448907503123-67254d59ca4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxnb2F0JTIwbWVhdHxlbnwwfHx8fDE3NjI3NzYwNzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
