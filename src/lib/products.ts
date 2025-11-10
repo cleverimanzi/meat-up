@@ -41,7 +41,7 @@ export const products: Product[] = [
     name: 'French-Trimmed Lamb Rack',
     description: 'An impressive and delicious centerpiece for any special occasion.',
     price: 35.0,
-    imageId: 'beef-steak',
+    imageId: 'meat-special',
   },
   {
     id: 'prod_008',
@@ -57,4 +57,11 @@ export const products: Product[] = [
     price: 14.0,
     imageId: 'whole-chicken',
   },
+  {
+    id: 'prod_010',
+    name: 'Nahatari',
+    description: 'A special selection of premium meat, perfect for a unique culinary experience.',
+    price: 45.0,
+    imageId: 'nahatari-meat',
+  }
 ];
