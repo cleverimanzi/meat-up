@@ -50,4 +50,25 @@ export const products: Product[] = [
     price: 18.5,
     imageId: 'cow-meat',
   },
+  {
+    id: 'prod_008',
+    name: 'Fresh Goat Meat',
+    description: 'Tender and flavorful goat meat, perfect for curries and stews.',
+    price: 16.5,
+    imageId: 'goat-meat',
+  },
+  {
+    id: 'prod_009',
+    name: 'Whole Roasting Chicken',
+    description: 'A whole chicken, ready for roasting. Perfect for a family dinner.',
+    price: 14.0,
+    imageId: 'whole-chicken',
+  },
+  {
+    id: 'prod_010',
+    name: 'Rabbit Meat',
+    description: 'Lean and tender rabbit meat, a great alternative to chicken.',
+    price: 22.0,
+    imageId: 'rabbit-meat',
+  },
 ];
