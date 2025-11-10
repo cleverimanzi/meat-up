@@ -6,7 +6,7 @@ import { useAuth } from '@/hooks/use-auth';
 import { auth } from '@/lib/firebase';
 import { useRouter } from 'next/navigation';
 import { signOut } from 'firebase/auth';
-import { ShoppingCart, User, LogOut } from 'lucide-react';
+import { ShoppingCart, User, LogOut, Beef } from 'lucide-react';
 import Image from 'next/image';
 import { useToast } from '@/hooks/use-toast';
 
@@ -43,7 +43,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <Link href="/dashboard" className="mr-6 flex items-center gap-2">
-          <Image src="/1942d5deb0f788e6228054cd92767ff6.jpg" alt="MeatUp Logo" width={40} height={40} className="rounded-full" />
+          <Beef className="h-8 w-8 text-primary" />
           <span className="font-headline text-xl font-bold">MeatUp</span>
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-medium md:flex group">
