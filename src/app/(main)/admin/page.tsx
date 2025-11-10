@@ -1,19 +1,60 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+import { collection, getDocs, orderBy, query, limit } from 'firebase/firestore';
+import { db } from '@/lib/firebase';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { DollarSign, Package, Users, PlusCircle } from "lucide-react";
+import { DollarSign, Package, Users, PlusCircle, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-// Mock data, in a real app this would come from a database
-const recentOrders = [
-  { id: 'ORD001', customer: 'Alice Johnson', amount: 45.50, date: '2024-05-24' },
-  { id: 'ORD002', customer: 'Bob Williams', amount: 120.00, date: '2024-05-24' },
-  { id: 'ORD003', customer: 'Charlie Brown', amount: 32.75, date: '2024-05-23' },
-  { id: 'ORD004', customer: 'Diana Prince', amount: 85.20, date: '2024-05-22' },
-];
-
-const totalProducts = 128; // This would also be dynamic
+interface Order {
+  id: string;
+  customer: string;
+  amount: number;
+  date: string;
+}
 
 export default function AdminPage() {
+  const [recentOrders, setRecentOrders] = useState<Order[]>([]);
+  const [totalProducts, setTotalProducts] = useState(0);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchData() {
+      setLoading(true);
+      try {
+        // Fetch total number of products
+        const productsCollection = collection(db, 'products');
+        const productsSnapshot = await getDocs(productsCollection);
+        setTotalProducts(productsSnapshot.size);
+
+        // Fetch recent orders
+        const ordersCollection = collection(db, 'orders');
+        const ordersQuery = query(ordersCollection, orderBy('date', 'desc'), limit(5));
+        const ordersSnapshot = await getDocs(ordersQuery);
+        const fetchedOrders = ordersSnapshot.docs.map(doc => {
+          const data = doc.data();
+          return {
+            id: doc.id,
+            customer: data.customerName || 'N/A',
+            amount: data.amount || 0,
+            // Convert Firestore Timestamp to a readable date string
+            date: data.date?.toDate ? data.date.toDate().toLocaleDateString() : 'N/A',
+          };
+        });
+        setRecentOrders(fetchedOrders);
+
+      } catch (error) {
+        console.error("Error fetching admin data:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchData();
+  }, []);
+
   return (
     <div className="container py-8">
       <div className="flex items-center justify-between mb-6">
@@ -51,7 +92,7 @@ export default function AdminPage() {
             <Package className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{totalProducts}</div>
+             {loading ? <Loader2 className="h-6 w-6 animate-spin" /> : <div className="text-2xl font-bold">{totalProducts}</div>}
             <p className="text-xs text-muted-foreground">Total products available</p>
           </CardContent>
         </Card>
@@ -62,29 +103,36 @@ export default function AdminPage() {
           <CardTitle>Recent Orders</CardTitle>
         </CardHeader>
         <CardContent>
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead>Order ID</TableHead>
-                <TableHead>Customer</TableHead>
-                <TableHead>Amount</TableHead>
-                <TableHead>Date</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {recentOrders.map((order) => (
-                <TableRow key={order.id}>
-                  <TableCell className="font-medium">{order.id}</TableCell>
-                  <TableCell>{order.customer}</TableCell>
-                  <TableCell>${order.amount.toFixed(2)}</TableCell>
-                  <TableCell>{order.date}</TableCell>
+          {loading ? (
+            <div className="flex justify-center items-center py-16">
+              <Loader2 className="h-8 w-8 animate-spin text-primary" />
+            </div>
+          ) : recentOrders.length > 0 ? (
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>Order ID</TableHead>
+                  <TableHead>Customer</TableHead>
+                  <TableHead>Amount</TableHead>
+                  <TableHead>Date</TableHead>
                 </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-          <p className="text-center py-8 text-sm text-muted-foreground">
-            Full order and product management functionality will be implemented here.
-          </p>
+              </TableHeader>
+              <TableBody>
+                {recentOrders.map((order) => (
+                  <TableRow key={order.id}>
+                    <TableCell className="font-medium">{order.id}</TableCell>
+                    <TableCell>{order.customer}</TableCell>
+                    <TableCell>${order.amount.toFixed(2)}</TableCell>
+                    <TableCell>{order.date}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          ) : (
+            <p className="text-center py-16 text-muted-foreground">
+              No recent orders found.
+            </p>
+          )}
         </CardContent>
       </Card>
     </div>
