@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 
 export default function ContactPage() {
   return (
@@ -25,6 +25,12 @@ export default function ContactPage() {
              <div className="flex items-center gap-4">
                 <MapPin className="h-5 w-5 text-primary"/>
                 <span>NYABIHU, BIGOGWE, WEST</span>
+              </div>
+               <div className="flex items-center gap-4">
+                <MessageCircle className="h-5 w-5 text-primary"/>
+                <a href="https://wa.me/250780104812" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                  Chat on WhatsApp
+                </a>
               </div>
           </div>
 

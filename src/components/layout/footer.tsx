@@ -1,4 +1,4 @@
-import { Twitter, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Twitter, Facebook, Instagram, Linkedin, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -21,6 +21,9 @@ export default function Footer() {
           <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">
             <Linkedin className="h-5 w-5" />
           </Link>
+          <a href="https://wa.me/250780104812" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">
+            <MessageCircle className="h-5 w-5" />
+          </a>
         </div>
       </div>
     </footer>
