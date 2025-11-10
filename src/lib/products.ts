@@ -34,7 +34,7 @@ export const products: Product[] = [
     name: 'Lean Ground Beef',
     description: '90/10 lean-to-fat ratio. Great for burgers, tacos, and bolognese.',
     price: 9.99,
-    imageId: 'ground-beef',
+    imageId: 'meat-special',
   },
   {
     id: 'prod_006',

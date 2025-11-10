@@ -31,12 +31,6 @@
       "imageHint": "salmon fillet"
     },
     {
-      "id": "ground-beef",
-      "description": "A mound of fresh ground beef, ready for cooking.",
-      "imageUrl": "https://images.unsplash.com/photo-1758994092686-d62712ac51ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxncm91bmQlMjBiZWVmfGVufDB8fHx8MTc2MjU5ODk1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "ground beef"
-    },
-    {
       "id": "goat-meat",
       "description": "Cubes of raw goat meat ready for cooking.",
       "imageUrl": "https://images.unsplash.com/photo-1448907503123-67254d59ca4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxnb2F0JTIwbWVhdHxlbnwwfHx8fDE3NjI3NzYwNzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
@@ -47,6 +41,12 @@
       "description": "A raw whole chicken prepared for roasting.",
       "imageUrl": "https://images.unsplash.com/photo-1604503468506-a8da13d82791?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyYXclMjBjaGlja2VufGVufDB8fHx8MTc2MjY5MTQ4Nnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "raw chicken"
+    },
+    {
+      "id": "meat-special",
+      "description": "A special cut of high-quality raw meat.",
+      "imageUrl": "https://images.unsplash.com/photo-1603048256381-355835c249a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwb3J0ZXJob3VzZSUyMHN0ZWFrfGVufDB8fHx8MTc2MjgwNzU5OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "special meat"
     }
   ]
 }
