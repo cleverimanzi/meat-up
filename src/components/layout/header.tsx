@@ -6,10 +6,8 @@ import { useAuth } from '@/hooks/use-auth';
 import { auth } from '@/lib/firebase';
 import { useRouter } from 'next/navigation';
 import { signOut } from 'firebase/auth';
-import { ShoppingCart, User, LogOut } from 'lucide-react';
+import { ShoppingCart, User, LogOut, Beef, Shield } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
-import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
   <Link
@@ -21,11 +19,13 @@ const NavLink = ({ href, children }: { href: string; children: React.ReactNode }
   </Link>
 );
 
+const ADMIN_EMAIL = 'japhetimanzi@gmail.com';
+
 export default function Header() {
   const { user } = useAuth();
   const router = useRouter();
   const { toast } = useToast();
-  const logoImage = PlaceHolderImages.find(p => p.id === 'meat-special');
+  const isAdmin = user?.email === ADMIN_EMAIL;
 
   const handleLogout = async () => {
     try {
@@ -45,16 +45,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <Link href="/dashboard" className="mr-6 flex items-center gap-2">
-          {logoImage && (
-            <div className="relative h-8 w-8">
-              <Image
-                src={logoImage.imageUrl}
-                alt="MeatUp logo"
-                className="rounded-full object-cover"
-                fill
-              />
-            </div>
-          )}
+          <Beef className="h-8 w-8 text-primary" />
           <span className="font-headline text-xl font-bold">MeatUp</span>
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-medium md:flex group">
@@ -62,6 +53,13 @@ export default function Header() {
           <NavLink href="/about">About</NavLink>
           <NavLink href="/contact">Contact</NavLink>
           <NavLink href="/products">Product</NavLink>
+          {isAdmin && (
+             <NavLink href="/admin">
+                <div className="flex items-center gap-1">
+                    <Shield className="h-4 w-4" /> Admin
+                </div>
+            </NavLink>
+          )}
         </nav>
         <div className="ml-auto flex items-center gap-4">
           {user ? (
@@ -72,9 +70,11 @@ export default function Header() {
                   <span className="sr-only">Cart</span>
                 </Link>
               </Button>
-              <Button variant="ghost" size="icon">
-                <User className="h-5 w-5" />
-                <span className="sr-only">Profile</span>
+              <Button variant="ghost" size="icon" asChild>
+                <Link href="/profile">
+                  <User className="h-5 w-5" />
+                  <span className="sr-only">Profile</span>
+                </Link>
               </Button>
               <Button variant="ghost" size="icon" onClick={handleLogout}>
                 <LogOut className="h-5 w-5" />

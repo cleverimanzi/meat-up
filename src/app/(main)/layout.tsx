@@ -1,21 +1,36 @@
 'use client';
 
 import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useAuth } from '@/hooks/use-auth';
 import { Loader2 } from 'lucide-react';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 
+const ADMIN_EMAIL = 'japhetimanzi@gmail.com';
+
 export default function MainLayout({ children }: { children: React.ReactNode }) {
   const { user, loading } = useAuth();
   const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
-    if (!loading && !user) {
-      router.push('/login');
+    if (loading) {
+      return;
     }
-  }, [user, loading, router]);
+
+    if (!user) {
+      router.push('/login');
+      return;
+    }
+    
+    const isAdmin = user.email === ADMIN_EMAIL;
+
+    if (pathname.startsWith('/admin') && !isAdmin) {
+        router.push('/dashboard');
+    }
+
+  }, [user, loading, router, pathname]);
 
   if (loading || !user) {
     return (
