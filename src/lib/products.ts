@@ -43,4 +43,11 @@ export const products: Product[] = [
     price: 35.0,
     imageId: 'lamb-rack',
   },
+  {
+    id: 'prod_007',
+    name: 'Cow Meat Cuts',
+    description: 'A selection of various beef cuts, perfect for a variety of dishes.',
+    price: 18.5,
+    imageId: 'cow-meat',
+  },
 ];

@@ -41,6 +41,12 @@
       "description": "An elegant rack of lamb, roasted with garlic and rosemary.",
       "imageUrl": "https://images.unsplash.com/photo-1610359798001-3e0cd6c8faab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxsYW1iJTIwcmFja3xlbnwwfHx8fDE3NjI2MTM2NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "lamb rack"
+    },
+    {
+      "id": "cow-meat",
+      "description": "Various cuts of fresh cow meat.",
+      "imageUrl": "https://images.unsplash.com/photo-1603048297172-c925e471a9f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxiZWVmJTIwY3V0c3xlbnwwfHx8fDE3NzE1NzM1MDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "beef cuts"
     }
   ]
 }
