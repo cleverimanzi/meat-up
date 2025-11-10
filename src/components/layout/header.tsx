@@ -7,7 +7,6 @@ import { auth } from '@/lib/firebase';
 import { useRouter } from 'next/navigation';
 import { signOut } from 'firebase/auth';
 import { ShoppingCart, User, LogOut, Beef } from 'lucide-react';
-import Image from 'next/image';
 import { useToast } from '@/hooks/use-toast';
 
 const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
