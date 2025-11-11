@@ -2,7 +2,7 @@
 
 import { useAuth } from '@/hooks/use-auth';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { User } from 'lucide-react';
 
 export default function ProfilePage() {
@@ -26,6 +26,7 @@ export default function ProfilePage() {
         <CardContent className="space-y-4">
           <div className="flex items-center gap-4">
             <Avatar className="h-20 w-20">
+              {user.photoURL && <AvatarImage src={user.photoURL} alt={user.displayName || user.email || 'User'} />}
               <AvatarFallback className="text-3xl">
                 {user.email ? getInitials(user.email) : <User />}
               </AvatarFallback>
