@@ -58,11 +58,5 @@ export const products: Product[] = [
     price: 14.0,
     imageId: 'whole-chicken',
   },
-  {
-    id: 'prod_010',
-    name: 'Nahatari',
-    description: 'A special selection of premium meat, perfect for a unique culinary experience.',
-    price: 45.0,
-    imageId: 'nahatari-meat',
-  }
 ];
+
