@@ -7,13 +7,15 @@ import type { Product } from '@/lib/types';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ShoppingCart } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { useCart } from '@/hooks/use-cart';
 
 export default function ProductCard({ product }: { product: Product }) {
   const image = PlaceHolderImages.find(p => p.id === product.imageId);
   const { toast } = useToast();
+  const { addToCart } = useCart();
 
   const handleAddToCart = () => {
-    // In a real app, this would add the item to the cart state.
+    addToCart(product);
     toast({
       title: 'Added to Cart',
       description: `${product.name} has been added to your cart.`,

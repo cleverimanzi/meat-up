@@ -8,6 +8,7 @@ import { useRouter } from 'next/navigation';
 import { signOut } from 'firebase/auth';
 import { ShoppingCart, User, LogOut, Beef, Shield } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { useCart } from '@/hooks/use-cart';
 
 const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
   <Link
@@ -25,6 +26,7 @@ export default function Header() {
   const { user } = useAuth();
   const router = useRouter();
   const { toast } = useToast();
+  const { itemCount } = useCart();
   const isAdmin = user?.email === ADMIN_EMAIL;
 
   const handleLogout = async () => {
@@ -65,7 +67,12 @@ export default function Header() {
           {user ? (
             <>
               <Button variant="ghost" size="icon" asChild>
-                <Link href="/cart">
+                <Link href="/cart" className="relative">
+                  {itemCount > 0 && (
+                     <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">
+                      {itemCount}
+                    </span>
+                  )}
                   <ShoppingCart className="h-5 w-5" />
                   <span className="sr-only">Cart</span>
                 </Link>

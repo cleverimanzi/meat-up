@@ -4,6 +4,7 @@ import { Alegreya } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
 import AuthProvider from '@/components/providers/auth-provider';
+import { CartProvider } from '@/components/providers/cart-provider';
 
 const alegreya = Alegreya({
   subsets: ['latin'],
@@ -39,8 +40,10 @@ export default function RootLayout({
         className={cn('font-body antialiased', alegreya.variable)}
       >
         <AuthProvider>
-          {children}
-          <Toaster />
+          <CartProvider>
+            {children}
+            <Toaster />
+          </CartProvider>
         </AuthProvider>
       </body>
     </html>
