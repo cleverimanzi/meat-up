@@ -44,13 +44,6 @@ export const products: Product[] = [
     price: 35.0,
     imageId: 'beef-ribs',
   },
-   {
-    id: 'prod_007',
-    name: 'Nahatari Meat',
-    description: 'A special cut of Nahatari meat, known for its unique flavor and tenderness.',
-    price: 45.0,
-    imageId: 'nahatari-meat',
-  },
   {
     id: 'prod_008',
     name: 'Fresh Goat Meat',
