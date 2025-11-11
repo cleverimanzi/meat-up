@@ -5,7 +5,7 @@ import { collection, getDocs, orderBy, query, limit } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { DollarSign, Package, Users, PlusCircle, Loader2 } from "lucide-react";
+import { DollarSign, Package, Users, PlusCircle, Loader2, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useRouter } from 'next/navigation';
 
@@ -75,10 +75,16 @@ export default function AdminPage() {
     <div className="container py-8">
       <div className="flex items-center justify-between mb-6">
         <h1 className="font-headline text-3xl font-bold">Admin Dashboard</h1>
-        <Button onClick={() => router.push('/admin/add-product')}>
-          <PlusCircle className="mr-2 h-4 w-4" />
-          Add Product
-        </Button>
+        <div className="flex gap-2">
+          <Button onClick={() => router.push('/admin/add-product')}>
+            <PlusCircle className="mr-2 h-4 w-4" />
+            Add Product
+          </Button>
+           <Button variant="outline" onClick={() => router.push('/admin/manage-products')}>
+            <Settings className="mr-2 h-4 w-4" />
+            Manage Products
+          </Button>
+        </div>
       </div>
       
       <div className="grid gap-4 md:grid-cols-3 mb-8">
