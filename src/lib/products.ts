@@ -34,14 +34,14 @@ export const products: Product[] = [
     name: 'Lean Ground Beef',
     description: '90/10 lean-to-fat ratio. Great for burgers, tacos, and bolognese.',
     price: 9.99,
-    imageId: 'meat-special',
+    imageId: 'ground-beef',
   },
   {
     id: 'prod_006',
-    name: 'French-Trimmed Lamb Rack',
+    name: 'Beef Ribs',
     description: 'An impressive and delicious centerpiece for any special occasion.',
     price: 35.0,
-    imageId: 'meat-special',
+    imageId: 'beef-ribs',
   },
   {
     id: 'prod_008',

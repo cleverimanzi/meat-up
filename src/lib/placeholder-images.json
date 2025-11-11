@@ -39,14 +39,20 @@
     {
       "id": "whole-chicken",
       "description": "A raw whole chicken prepared for roasting.",
-      "imageUrl": "https://images.unsplash.com/photo-1604503468506-a8da13d82791?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyYXclMjBjaGlja2VufGVufDB8fHx8MTc2MjY5MTQ4Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1604503468506-a8da13d82791?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyYXclMjBjaGlja2VufGVufDB8fHx8MTc2MjY5MTQ4Nnww&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "raw chicken"
     },
     {
-      "id": "meat-special",
-      "description": "A special cut of high-quality raw meat.",
-      "imageUrl": "https://images.unsplash.com/photo-1603048256381-355835c249a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwb3J0ZXJob3VzZSUyMHN0ZWFrfGVufDB8fHx8MTc2MjgwNzU5OXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "special meat"
+      "id": "ground-beef",
+      "description": "A package of fresh raw ground beef.",
+      "imageUrl": "https://images.unsplash.com/photo-1620921027793-948888b79493?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxHcm91bmQlMjBiZWVmfGVufDB8fHx8MTc2MzkzMDExNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ground beef"
+    },
+    {
+      "id": "beef-ribs",
+      "description": "A rack of raw beef ribs.",
+      "imageUrl": "https://images.unsplash.com/photo-1594041682804-0062a7516848?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBiZWVmJTIwcmlic3xlbnwwfHx8fDE3NjM5MzAyMjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "beef ribs"
     },
     {
       "id": "nahatari-meat",
