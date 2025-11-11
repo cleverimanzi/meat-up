@@ -3,13 +3,6 @@ import type { Product } from '@/lib/types';
 
 export const products: Product[] = [
   {
-    id: 'prod_001',
-    name: 'Prime Beef Steak',
-    description: 'Aged for 28 days for maximum flavor and tenderness. Perfect for grilling.',
-    price: 24.99,
-    imageId: 'beef-steak',
-  },
-  {
     id: 'prod_002',
     name: 'Spicy Chicken Wings',
     description: 'Marinated in our secret spicy blend. Ideal for parties and game nights.',
@@ -59,4 +52,3 @@ export const products: Product[] = [
     imageId: 'whole-chicken',
   },
 ];
-
