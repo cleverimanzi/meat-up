@@ -28,14 +28,12 @@ import { useState } from 'react';
 import { Loader2 } from 'lucide-react';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 const formSchema = z.object({
   name: z.string().min(3, { message: 'Product name must be at least 3 characters.' }),
   description: z.string().min(10, { message: 'Description must be at least 10 characters.' }),
   price: z.coerce.number().positive({ message: 'Price must be a positive number.' }),
-  imageId: z.string().min(1, { message: 'Please select an image.' }),
+  imageUrl: z.string().url({ message: 'Please enter a valid image URL.' }),
 });
 
 export default function AddProductPage() {
@@ -49,7 +47,7 @@ export default function AddProductPage() {
       name: '',
       description: '',
       price: 0,
-      imageId: '',
+      imageUrl: '',
     },
   });
 
@@ -60,7 +58,7 @@ export default function AddProductPage() {
         name: values.name,
         description: values.description,
         price: values.price,
-        imageId: values.imageId,
+        imageUrl: values.imageUrl,
         createdAt: serverTimestamp(),
       });
       toast({
@@ -135,26 +133,15 @@ export default function AddProductPage() {
                 />
                  <FormField
                   control={form.control}
-                  name="imageId"
+                  name="imageUrl"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Product Image</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select an image for the product" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          {PlaceHolderImages.map(image => (
-                            <SelectItem key={image.id} value={image.id}>
-                              {image.description}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
+                      <FormLabel>Product Image URL</FormLabel>
+                      <FormControl>
+                        <Input placeholder="https://example.com/image.jpg" {...field} />
+                      </FormControl>
                        <FormDescription>
-                        This image will be displayed on the product card.
+                        Enter the full web address for the product image.
                       </FormDescription>
                       <FormMessage />
                     </FormItem>

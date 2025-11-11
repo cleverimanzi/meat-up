@@ -4,7 +4,6 @@ import { useCart } from '@/hooks/use-cart';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ShoppingCart, Trash2 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -31,12 +30,11 @@ export default function CartPage() {
           ) : (
             <div className="space-y-4">
               {cartItems.map(item => {
-                const image = PlaceHolderImages.find(p => p.id === item.imageId);
                 return (
                   <div key={item.id} className="flex items-center justify-between gap-4 border-b pb-4">
                     <div className="flex items-center gap-4">
                        <div className="relative h-16 w-16 rounded-md overflow-hidden">
-                        {image && <Image src={image.imageUrl} alt={item.name} fill className="object-cover" />}
+                        {item.imageUrl && <Image src={item.imageUrl} alt={item.name} fill className="object-cover" />}
                       </div>
                       <div>
                         <h3 className="font-semibold">{item.name}</h3>

@@ -27,7 +27,7 @@ export default function DashboardPage() {
             name: data.name,
             description: data.description,
             price: data.price,
-            imageId: data.imageId,
+            imageUrl: data.imageUrl,
           };
         });
 

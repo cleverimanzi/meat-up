@@ -3,13 +3,13 @@ export type Product = {
   name: string;
   description: string;
   price: number;
-  imageId: string;
+  imageUrl: string;
 };
 
 export type CartItem = {
   id: string;
   name: string;
   price: number;
-  imageId: string;
+  imageUrl: string;
   quantity: number;
 };

@@ -22,8 +22,6 @@ import {
 } from "@/components/ui/alert-dialog"
 import { useToast } from '@/hooks/use-toast';
 import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
-
 
 export default function ManageProductsPage() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -43,7 +41,7 @@ export default function ManageProductsPage() {
           name: data.name,
           description: data.description,
           price: data.price,
-          imageId: data.imageId,
+          imageUrl: data.imageUrl,
         };
       });
       setProducts(fetchedProducts);
@@ -103,13 +101,11 @@ export default function ManageProductsPage() {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {products.map((product) => {
-                  const image = PlaceHolderImages.find(p => p.id === product.imageId);
-                  return (
+                {products.map((product) => (
                     <TableRow key={product.id}>
                        <TableCell>
                         <div className="relative h-12 w-12 rounded-md overflow-hidden">
-                           {image && <Image src={image.imageUrl} alt={product.name} fill className="object-cover" />}
+                           {product.imageUrl && <Image src={product.imageUrl} alt={product.name} fill className="object-cover" />}
                         </div>
                       </TableCell>
                       <TableCell className="font-medium">{product.name}</TableCell>
@@ -135,8 +131,7 @@ export default function ManageProductsPage() {
                         </AlertDialog>
                       </TableCell>
                     </TableRow>
-                  )
-                })}
+                ))}
               </TableBody>
             </Table>
           ) : (

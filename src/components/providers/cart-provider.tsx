@@ -49,7 +49,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
         id: product.id,
         name: product.name,
         price: product.price,
-        imageId: product.imageId,
+        imageUrl: product.imageUrl,
         quantity: 1 
       }];
     });
