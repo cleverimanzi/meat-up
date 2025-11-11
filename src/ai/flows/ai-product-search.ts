@@ -1,3 +1,4 @@
+
 'use server';
 
 /**
@@ -10,6 +11,9 @@
 
 import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
+import { products } from '@/lib/products';
+
+const allProductNames = products.map(p => p.name).join(', ');
 
 const AIProductSearchInputSchema = z.object({
   query: z.string().describe('The user search query for meat products.'),
@@ -29,13 +33,15 @@ const productSearchPrompt = ai.definePrompt({
   name: 'productSearchPrompt',
   input: {schema: AIProductSearchInputSchema},
   output: {schema: AIProductSearchOutputSchema},
-  prompt: `You are a helpful assistant that suggests meat products based on user queries.
+  prompt: `You are a helpful assistant that suggests meat products based on user queries from a specified list of products.
 
-  The user may not know the exact name of the product, so you should use AI to understand their request and suggest relevant products.
+  The available products are: ${allProductNames}.
+  
+  The user may not know the exact name of the product, so you should use AI to understand their request and suggest relevant products from the available list.
 
   User Query: {{{query}}}
 
-  Suggestions:`, // Ensure the LLM returns result in JSON format.
+  Suggestions:`,
 });
 
 const aiProductSearchFlow = ai.defineFlow(
