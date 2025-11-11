@@ -16,6 +16,14 @@ interface Order {
   date: string;
 }
 
+const sampleOrders: Order[] = [
+  { id: 'ORD001', customer: 'John Doe', amount: 45.50, date: new Date().toLocaleDateString() },
+  { id: 'ORD002', customer: 'Jane Smith', amount: 89.99, date: new Date(Date.now() - 86400000).toLocaleDateString() },
+  { id: 'ORD003', customer: 'Mike Johnson', amount: 120.00, date: new Date(Date.now() - 172800000).toLocaleDateString() },
+  { id: 'ORD004', customer: 'Emily Brown', amount: 32.75, date: new Date(Date.now() - 259200000).toLocaleDateString() },
+];
+
+
 export default function AdminPage() {
   const [recentOrders, setRecentOrders] = useState<Order[]>([]);
   const [totalProducts, setTotalProducts] = useState(0);
@@ -35,7 +43,7 @@ export default function AdminPage() {
         const ordersCollection = collection(db, 'orders');
         const ordersQuery = query(ordersCollection, orderBy('date', 'desc'), limit(5));
         const ordersSnapshot = await getDocs(ordersQuery);
-        const fetchedOrders = ordersSnapshot.docs.map(doc => {
+        let fetchedOrders = ordersSnapshot.docs.map(doc => {
           const data = doc.data();
           return {
             id: doc.id,
@@ -45,10 +53,16 @@ export default function AdminPage() {
             date: data.date?.toDate ? data.date.toDate().toLocaleDateString() : 'N/A',
           };
         });
+
+        if (fetchedOrders.length === 0) {
+            fetchedOrders = sampleOrders;
+        }
+
         setRecentOrders(fetchedOrders);
 
       } catch (error) {
         console.error("Error fetching admin data:", error);
+        setRecentOrders(sampleOrders); // fallback to sample data on error
       } finally {
         setLoading(false);
       }
