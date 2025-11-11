@@ -7,7 +7,6 @@ import type { Product } from '@/lib/types';
 import AiMeatSearch from "@/components/ai-meat-search";
 import ProductGrid from "@/components/product-grid";
 import { Loader2 } from 'lucide-react';
-import { products as sampleProducts } from '@/lib/products';
 
 export default function DashboardPage() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -31,14 +30,10 @@ export default function DashboardPage() {
           };
         });
 
-        if (fetchedProducts.length === 0) {
-          fetchedProducts = sampleProducts;
-        }
-
         setProducts(fetchedProducts);
       } catch (error) {
         console.error("Error fetching products:", error);
-        setProducts(sampleProducts);
+        setProducts([]);
       } finally {
         setLoading(false);
       }
