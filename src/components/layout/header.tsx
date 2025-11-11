@@ -13,7 +13,7 @@ import { useCart } from '@/hooks/use-cart';
 const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
   <Link
     href={href}
-    className="relative text-foreground/80 transition-colors hover:text-foreground"
+    className="relative text-foreground/80 transition-colors hover:text-foreground group"
   >
     {children}
     <span className="absolute bottom-0 left-0 h-0.5 w-full scale-x-0 bg-primary transition-transform duration-300 group-hover:scale-x-100"></span>
@@ -50,11 +50,11 @@ export default function Header() {
           <Beef className="h-8 w-8 text-primary" />
           <span className="font-headline text-xl font-bold">MeatUp</span>
         </Link>
-        <nav className="hidden items-center gap-6 text-sm font-medium md:flex group">
+        <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
           <NavLink href="/dashboard">Home</NavLink>
+          <NavLink href="/products">Products</NavLink>
           <NavLink href="/about">About</NavLink>
           <NavLink href="/contact">Contact</NavLink>
-          <NavLink href="/products">Product</NavLink>
           {isAdmin && (
              <NavLink href="/admin">
                 <div className="flex items-center gap-1">

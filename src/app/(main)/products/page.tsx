@@ -1,8 +1,44 @@
+
+'use client';
+
+import { useEffect, useState } from 'react';
+import { collection, getDocs, orderBy, query } from 'firebase/firestore';
+import { db } from '@/lib/firebase';
+import type { Product } from '@/lib/types';
 import ProductGrid from "@/components/product-grid";
-import { products } from "@/lib/products";
+import { Loader2 } from 'lucide-react';
 
 export default function ProductsPage() {
-  const allProducts = products;
+  const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchProducts() {
+      setLoading(true);
+      try {
+        const productsCollection = collection(db, 'products');
+        const productsQuery = query(productsCollection, orderBy('createdAt', 'desc'));
+        const productsSnapshot = await getDocs(productsQuery);
+        const fetchedProducts = productsSnapshot.docs.map(doc => {
+          const data = doc.data();
+          return {
+            id: doc.id,
+            name: data.name,
+            description: data.description,
+            price: data.price,
+            imageId: data.imageId,
+          };
+        });
+        setProducts(fetchedProducts);
+      } catch (error) => {
+        console.error("Error fetching products:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchProducts();
+  }, []);
 
   return (
     <div className="container py-8">
@@ -16,7 +52,17 @@ export default function ProductsPage() {
       </section>
 
       <section className="my-8">
-        <ProductGrid products={allProducts} />
+         {loading ? (
+          <div className="flex justify-center items-center py-16">
+            <Loader2 className="h-8 w-8 animate-spin text-primary" />
+          </div>
+        ) : products.length > 0 ? (
+          <ProductGrid products={products} />
+        ) : (
+          <p className="text-center py-16 text-muted-foreground">
+            No products available at the moment.
+          </p>
+        )}
       </section>
     </div>
   );
