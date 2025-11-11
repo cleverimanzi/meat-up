@@ -30,7 +30,7 @@ export default function ProductsPage() {
           };
         });
         setProducts(fetchedProducts);
-      } catch (error) => {
+      } catch (error) {
         console.error("Error fetching products:", error);
       } finally {
         setLoading(false);
