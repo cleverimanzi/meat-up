@@ -3,6 +3,13 @@ import type { Product } from '@/lib/types';
 
 export const products: Product[] = [
   {
+    id: 'prod_001',
+    name: 'Prime Beef Steak',
+    description: 'A premium cut of beef, well-marbled, tender, and full of flavor.',
+    price: 25.0,
+    imageId: 'beef-steak',
+  },
+  {
     id: 'prod_002',
     name: 'Spicy Chicken Wings',
     description: 'Marinated in our secret spicy blend. Ideal for parties and game nights.',
@@ -36,6 +43,13 @@ export const products: Product[] = [
     description: 'An impressive and delicious centerpiece for any special occasion.',
     price: 35.0,
     imageId: 'beef-ribs',
+  },
+   {
+    id: 'prod_007',
+    name: 'Nahatari Meat',
+    description: 'A special cut of Nahatari meat, known for its unique flavor and tenderness.',
+    price: 45.0,
+    imageId: 'nahatari-meat',
   },
   {
     id: 'prod_008',
