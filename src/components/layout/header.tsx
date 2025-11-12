@@ -6,7 +6,7 @@ import { useAuth } from '@/hooks/use-auth';
 import { auth } from '@/lib/firebase';
 import { useRouter } from 'next/navigation';
 import { signOut } from 'firebase/auth';
-import { ShoppingCart, User, LogOut, Beef, Shield, HelpCircle } from 'lucide-react';
+import { ShoppingCart, User, LogOut, Beef, Shield } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { useCart } from '@/hooks/use-cart';
 
@@ -55,7 +55,6 @@ export default function Header() {
           <NavLink href="/products">Products</NavLink>
           <NavLink href="/about">About</NavLink>
           <NavLink href="/contact">Contact</NavLink>
-          <NavLink href="/help-center">Help Center</NavLink>
           {isAdmin && (
              <NavLink href="/admin">
                 <div className="flex items-center gap-1">
