@@ -119,6 +119,60 @@
       "description": "Fresh cuts of cow's meat, perfect for stews and slow cooking.",
       "imageUrl": "https://images.unsplash.com/photo-1588624147799-a09e083a2165?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBiZWVmfGVufDB8fHx8fDE3NjQxNTQ1MDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "raw beef"
+    },
+    {
+      "id": "sheep-meat",
+      "description": "Rich, flavorful sheep meat, ideal for hearty stews and roasts.",
+      "imageUrl": "https://images.unsplash.com/photo-1581096111357-394a73a5043a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBtdXR0b258ZW58MHx8fHwxNzY0NTIzMzMxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "raw mutton"
+    },
+    {
+      "id": "chicken-breast",
+      "description": "Lean and versatile boneless, skinless chicken breasts.",
+      "imageUrl": "https://images.unsplash.com/photo-1604503468506-a8da13d82791?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBjaGlja2VuJTIwYnJlYXN0fGVufDB8fHx8MTc2NDUyMzM4N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "raw chicken breast"
+    },
+    {
+      "id": "sirloin-steak",
+      "description": "A lean yet tender cut, great for grilling or pan-searing.",
+      "imageUrl": "https://images.unsplash.com/photo-1546964124-4c743847724b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBzaXJsb2luJTIwc3RlYWt8ZW58MHx8fHwxNzY0NTIzNDIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "raw sirloin steak"
+    },
+    {
+      "id": "lamb-shoulder",
+      "description": "Perfect for slow-roasting, resulting in tender, pull-apart meat.",
+      "imageUrl": "https://images.unsplash.com/photo-1533088912386-d38b050d2388?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBsYW1iJTIwc2hvdWxkZXJ8ZW58MHx8fHwxNzY0NTIzNDU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "raw lamb shoulder"
+    },
+    {
+      "id": "chicken-thighs",
+      "description": "Juicy and flavorful bone-in, skin-on chicken thighs.",
+      "imageUrl": "https://images.unsplash.com/photo-1611933393933-96d53b1e3266?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBjaGlja2VuJTIwdGhpZ2hzfGVufDB8fHx8MTc2NDUyMzQ5MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "raw chicken thighs"
+    },
+    {
+      "id": "pork-ribs",
+      "description": "A full rack of pork ribs, ready for your favorite BBQ sauce.",
+      "imageUrl": "https://images.unsplash.com/photo-1622089423594-51e6b5f44203?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBwb3JrJTIwcmlic3xlbnwwfHx8fDE3NjQ1MjM1MjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "raw pork ribs"
+    },
+    {
+      "id": "filet-mignon",
+      "description": "The most tender cut of beef, exceptionally lean and buttery.",
+      "imageUrl": "https://images.unsplash.com/photo-1618311346571-07a3843b6a9f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBmaWxldCUyMG1pZ25vbnxlbnwwfHx8fDE3NjQ1MjM1NjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "raw filet mignon"
+    },
+    {
+      "id": "ground-lamb",
+      "description": "Flavorful ground lamb, perfect for Mediterranean dishes.",
+      "imageUrl": "https://images.unsplash.com/photo-1562967914-01efa7e87832?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncm91bmQlMjBsYW1ifGVufDB8fHx8MTc2NDUyMzU5N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ground lamb"
+    },
+    {
+      "id": "beef-shank",
+      "description": "Ideal for slow cooking, making rich broths, and Osso Buco.",
+      "imageUrl": "https://images.unsplash.com/photo-1598514983145-42f23b28b762?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBiZWVmJTIwc2hhbmt8ZW58MHx8fHwxNzY0NTIzNjMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "raw beef shank"
     }
   ]
 }

@@ -58,7 +58,7 @@ export const products: Product[] = [
     price: 16.99,
     imageUrl: 'https://images.unsplash.com/photo-1448907503123-67254d59ca4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxnb2F0JTIwbWVhdHxlbnwwfHx8fDE3NjI3NzYwNzh8MA&ixlib=rb-4.1.0&q=80&w=1080',
   },
-   {
+  {
     id: 'prod_9',
     name: 'Lamb Chops',
     description: 'Tender and flavorful, perfect for grilling or pan-searing.',
@@ -128,6 +128,67 @@ export const products: Product[] = [
     price: 11.99,
     imageUrl: 'https://images.unsplash.com/photo-1588624147799-a09e083a2165?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBiZWVmfGVufDB8fHx8fDE3NjQxNTQ1MDF8MA&ixlib=rb-4.1.0&q=80&w=1080',
   },
+  {
+    id: 'prod_19',
+    name: 'Sheep Meat (Mutton)',
+    description: 'Rich, flavorful sheep meat, ideal for hearty stews and roasts.',
+    price: 14.50,
+    imageUrl: 'https://images.unsplash.com/photo-1581096111357-394a73a5043a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBtdXR0b258ZW58MHx8fHwxNzY0NTIzMzMxfDA&ixlib=rb-4.1.0&q=80&w=1080',
+  },
+  {
+    id: 'prod_20',
+    name: 'Chicken Breast',
+    description: 'Lean and versatile boneless, skinless chicken breasts.',
+    price: 10.99,
+    imageUrl: 'https://images.unsplash.com/photo-1604503468506-a8da13d82791?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBjaGlja2VuJTIwYnJlYXN0fGVufDB8fHx8MTc2NDUyMzM4N3ww&ixlib=rb-4.1.0&q=80&w=1080',
+  },
+  {
+    id: 'prod_21',
+    name: 'Beef Sirloin Steak',
+    description: 'A lean yet tender cut, great for grilling or pan-searing.',
+    price: 22.50,
+    imageUrl: 'https://images.unsplash.com/photo-1546964124-4c743847724b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBzaXJsb2luJTIwc3RlYWt8ZW58MHx8fHwxNzY0NTIzNDIwfDA&ixlib=rb-4.1.0&q=80&w=1080',
+  },
+  {
+    id: 'prod_22',
+    name: 'Lamb Shoulder',
+    description: 'Perfect for slow-roasting, resulting in tender, pull-apart meat.',
+    price: 19.99,
+    imageUrl: 'https://images.unsplash.com/photo-1533088912386-d38b050d2388?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBsYW1iJTIwc2hvdWxkZXJ8ZW58MHx8fHwxNzY0NTIzNDU3fDA&ixlib=rb-4.1.0&q=80&w=1080',
+  },
+  {
+    id: 'prod_23',
+    name: 'Chicken Thighs',
+    description: 'Juicy and flavorful bone-in, skin-on chicken thighs.',
+    price: 7.99,
+    imageUrl: 'https://images.unsplash.com/photo-1611933393933-96d53b1e3266?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBjaGlja2VuJTIwdGhpZ2hzfGVufDB8fHx8MTc2NDUyMzQ5MXww&ixlib=rb-4.1.0&q=80&w=1080',
+  },
+  {
+    id: 'prod_24',
+    name: 'Pork Ribs',
+    description: 'A full rack of pork ribs, ready for your favorite BBQ sauce.',
+    price: 15.75,
+    imageUrl: 'https://images.unsplash.com/photo-1622089423594-51e6b5f44203?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBwb3JrJTIwcmlic3xlbnwwfHx8fDE3NjQ1MjM1MjR8MA&ixlib=rb-4.1.0&q=80&w=1080',
+  },
+  {
+    id: 'prod_25',
+    name: 'Filet Mignon',
+    description: 'The most tender cut of beef, exceptionally lean and buttery.',
+    price: 35.99,
+    imageUrl: 'https://images.unsplash.com/photo-1618311346571-07a3843b6a9f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBmaWxldCUyMG1pZ25vbnxlbnwwfHx8fDE3NjQ1MjM1NjF8MA&ixlib=rb-4.1.0&q=80&w=1080',
+  },
+  {
+    id: 'prod_26',
+    name: 'Ground Lamb',
+    description: 'Flavorful ground lamb, perfect for Mediterranean dishes.',
+    price: 12.99,
+    imageUrl: 'https://images.unsplash.com/photo-1562967914-01efa7e87832?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncm91bmQlMjBsYW1ifGVufDB8fHx8MTc2NDUyMzU5N3ww&ixlib=rb-4.1.0&q=80&w=1080',
+  },
+  {
+    id: 'prod_27',
+    name: 'Beef Shank',
+    description: 'Ideal for slow cooking, making rich broths, and Osso Buco.',
+    price: 10.50,
+    imageUrl: 'https://images.unsplash.com/photo-1598514983145-42f23b28b762?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBiZWVmJTIwc2hhbmt8ZW58MHx8fHwxNzY0NTIzNjMwfDA&ixlib=rb-4.1.0&q=80&w=1080',
+  }
 ];
-
-    
