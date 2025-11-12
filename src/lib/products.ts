@@ -1,11 +1,5 @@
 
 import type { Product } from '@/lib/types';
-import { PlaceHolderImages } from './placeholder-images';
-
-function getImageUrl(id: string): string {
-  const image = PlaceHolderImages.find(p => p.id === id);
-  return image ? image.imageUrl : 'https://placehold.co/600x400';
-}
 
 export const products: Product[] = [
   {
@@ -13,125 +7,127 @@ export const products: Product[] = [
     name: 'Prime Ribeye Steak',
     description: 'A well-marbled, juicy, and flavorful cut, perfect for grilling.',
     price: 25.99,
-    imageUrl: getImageUrl('beef-steak'),
+    imageUrl: 'https://images.unsplash.com/photo-1603048256381-355835c249a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBiZWVmJTIwc3RlYWt8ZW58MHx8fHwxNzYzNTM0MTcxfDA&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_2',
     name: 'Fresh Chicken Wings',
     description: 'Perfect for grilling, frying, or baking with your favorite sauce.',
     price: 8.99,
-    imageUrl: getImageUrl('chicken-wings'),
+    imageUrl: 'https://images.unsplash.com/photo-1587593810167-a84920ea0781?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBjaGlja2VuJTIwd2luZ3N8ZW58MHx8fHwxNzYzNTM0MjYyfDA&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_3',
     name: 'Thick-Cut Pork Chops',
     description: 'Juicy, bone-in pork chops that are full of flavor.',
     price: 12.49,
-    imageUrl: getImageUrl('pork-chops'),
+    imageUrl: 'https://images.unsplash.com/photo-1606842349024-5d9b0a1a4a1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBwb3JrJTIwY2hvcHN8ZW58MHx8fHwxNzYzNTM0MzE3fDA&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_4',
     name: 'Wild-Caught Salmon Fillet',
     description: 'A rich and oily fish, packed with omega-3 fatty acids.',
     price: 18.99,
-    imageUrl: getImageUrl('salmon-fillet'),
+    imageUrl: 'https://images.unsplash.com/photo-1559058789-2e51271b4a64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBzYWxtb24lMjBmaWxsZXR8ZW58MHx8fHwxNzYzNTM0MzYwfDA&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_5',
     name: 'Raw Whole Chicken',
     description: 'Ideal for a family roast or parting out for various meals.',
     price: 14.99,
-    imageUrl: getImageUrl('whole-chicken'),
+    imageUrl: 'https://images.unsplash.com/photo-1604503468506-a8da13d82791?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyYXclMjBjaGlja2VufGVufDB8fHx8MTc2MjY5MTQ4Nnww&ixlibrb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_6',
     name: 'Lean Ground Beef',
     description: '90/10 lean ground beef, perfect for burgers, tacos, and meatballs.',
     price: 9.99,
-    imageUrl: getImageUrl('ground-beef'),
+    imageUrl: 'https://images.unsplash.com/photo-1620921027793-948888b79493?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxHcm91bmQlMjBiZWVmfGVufDB8fHx8MTc2MzkzMDExNHww&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_7',
     name: 'Beef Short Ribs',
     description: 'Meaty and tender, ideal for braising or slow cooking.',
     price: 17.99,
-    imageUrl: getImageUrl('beef-ribs'),
+    imageUrl: 'https://images.unsplash.com/photo-1594041682804-0062a7516848?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBiZWVmJTIwcmlic3xlbnwwfHx8fDE3NjM5MzAyMjF8MA&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_8',
     name: 'Goat Meat Cubes',
     description: 'Tender goat meat cubes, perfect for stews and curries.',
     price: 16.99,
-    imageUrl: getImageUrl('goat-meat'),
+    imageUrl: 'https://images.unsplash.com/photo-1448907503123-67254d59ca4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxnb2F0JTIwbWVhdHxlbnwwfHx8fDE3NjI3NzYwNzh8MA&ixlib=rb-4.1.0&q=80&w=1080',
   },
    {
     id: 'prod_9',
     name: 'Lamb Chops',
     description: 'Tender and flavorful, perfect for grilling or pan-searing.',
     price: 22.99,
-    imageUrl: getImageUrl('lamb-chops'),
+    imageUrl: 'https://images.unsplash.com/photo-1629515252651-935a8a47511c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBsYW1iJTIwY2hvcHN8ZW58MHx8fHwxNzY0MTU0MTIwfDA&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_10',
     name: 'Pork Sausage Links',
     description: 'Savory and delicious, great for breakfast or grilling.',
     price: 7.49,
-    imageUrl: getImageUrl('pork-sausage'),
+    imageUrl: 'https://images.unsplash.com/photo-1591672842426-17b5b4e29c29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBwb3JrJTIwc2F1c2FnZXxlbnwwfHx8fDE3NjQxNTQxODd8MA&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_11',
     name: 'Smoked Bacon',
     description: 'Thick-cut, applewood-smoked bacon for a perfect breakfast.',
     price: 9.99,
-    imageUrl: getImageUrl('bacon'),
+    imageUrl: 'https://images.unsplash.com/photo-1628848829983-936b8a8161f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBiYWNvbnxlbnwwfHx8fDE3NjQxNTQyMjN8MA&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_12',
     name: 'Turkey Breast',
     description: 'Boneless, skinless turkey breast, a lean and healthy option.',
     price: 15.99,
-    imageUrl: getImageUrl('turkey-breast'),
+    imageUrl: 'https://images.unsplash.com/photo-1596956472466-2d3a39e782b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjB0dXJrZXklMjBicmVhc3R8ZW58MHx8fHwxNzY0MTU0MjYwfDA&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_13',
     name: 'Duck Breast',
     description: 'Rich and flavorful duck breast with a crispy skin.',
     price: 24.99,
-    imageUrl: getImageUrl('duck-breast'),
+    imageUrl: 'https://images.unsplash.com/photo-1626202410408-a53825832a26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBkdWNrJTIwYnJlYXN0fGVufDB8fHx8MTc2NDE1NDMwMHww&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_14',
     name: 'Beef Brisket',
     description: 'A large cut perfect for smoking or slow cooking.',
     price: 35.50,
-    imageUrl: getImageUrl('beef-brisket'),
+    imageUrl: 'https://images.unsplash.com/photo-1615934322462-cc9b4c05333f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBiZWVmJTIwYnJpc2tldHxlbnwwfHx8fDE3NjQxNTQzNDF8MA&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_15',
     name: 'T-Bone Steak',
     description: 'A classic steak combining a New York strip and a filet.',
     price: 29.99,
-    imageUrl: getImageUrl('t-bone-steak'),
+    imageUrl: 'https://images.unsplash.com/photo-1629515252651-935a8a47511c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0LWJvbmUlMjBzdGVha3xlbnwwfHx8fDE3NjQxNTQzNzR8MA&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_16',
     name: 'Pork Belly',
     description: 'A fatty, flavorful cut perfect for roasting or braising.',
     price: 13.99,
-    imageUrl: getImageUrl('pork-belly'),
+    imageUrl: 'https://images.unsplash.com/photo-1533777324565-a04026b24422?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBwb3JrJTIwYmVsbHl8ZW58MHx8fHwxNzY0MTU0NDIyfDA&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_17',
     name: 'Ground Pork',
     description: 'Versatile ground pork for meatballs, sausages, or stir-fries.',
     price: 6.99,
-    imageUrl: getImageUrl('ground-pork'),
+    imageUrl: 'https://images.unsplash.com/photo-1560963333-5ff89154a20b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncm91bmQlMjBwb3JrfGVufDB8fHx8MTc2NDE1NDQ2MHww&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_18',
     name: "Cow's Meat",
     description: "Fresh cuts of cow's meat, perfect for stews and slow cooking.",
     price: 11.99,
-    imageUrl: getImageUrl('cows-meat'),
+    imageUrl: 'https://images.unsplash.com/photo-1588624147799-a09e083a2165?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBiZWVmfGVufDB8fHx8fDE3NjQxNTQ1MDF8MA&ixlib=rb-4.1.0&q=80&w=1080',
   },
 ];
+
+    
