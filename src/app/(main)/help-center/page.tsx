@@ -6,6 +6,7 @@ import {
 } from '@/components/ui/accordion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { HelpCircle } from 'lucide-react';
+import HelpCenterSearch from '@/components/help-center-search';
 
 const faqs = [
   {
@@ -47,21 +48,26 @@ export default function HelpCenterPage() {
         </CardHeader>
         <CardContent>
           <p className="mb-6 text-muted-foreground">
-            Have questions? We've got answers. Here are some of our most
-            frequently asked questions.
+            Have questions? Ask our AI assistant or check our frequently asked questions below.
           </p>
-          <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, index) => (
-              <AccordionItem value={`item-${index}`} key={index}>
-                <AccordionTrigger className="text-left font-semibold">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+
+          <HelpCenterSearch />
+
+          <div className="mt-8">
+            <h3 className="mb-4 text-2xl font-headline font-bold">Frequently Asked Questions</h3>
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.map((faq, index) => (
+                <AccordionItem value={`item-${index}`} key={index}>
+                  <AccordionTrigger className="text-left font-semibold">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
         </CardContent>
       </Card>
     </div>
