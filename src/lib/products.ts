@@ -127,4 +127,11 @@ export const products: Product[] = [
     price: 6.99,
     imageUrl: getImageUrl('ground-pork'),
   },
+  {
+    id: 'prod_18',
+    name: "Cow's Meat",
+    description: "Fresh cuts of cow's meat, perfect for stews and slow cooking.",
+    price: 11.99,
+    imageUrl: getImageUrl('cows-meat'),
+  },
 ];
