@@ -3,9 +3,11 @@
 import { useEffect } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { useAuth } from '@/hooks/use-auth';
-import { Loader2 } from 'lucide-react';
+import { Loader2, MessageCircle } from 'lucide-react';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const ADMIN_EMAIL = 'japhetimanzi@gmail.com';
 
@@ -45,6 +47,15 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
       <Header />
       <main className="flex-grow">{children}</main>
       <Footer />
+       <Link href="https://wa.me/250780104812" target="_blank" rel="noopener noreferrer" className="fixed bottom-6 right-6 z-50">
+        <Button
+          size="lg"
+          className="rounded-full shadow-lg h-16 w-16 p-0 flex items-center justify-center"
+        >
+          <MessageCircle className="h-8 w-8" />
+          <span className="sr-only">Chat on WhatsApp</span>
+        </Button>
+      </Link>
     </div>
   );
 }
