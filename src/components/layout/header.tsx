@@ -52,7 +52,6 @@ export default function Header() {
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
           <NavLink href="/dashboard">Home</NavLink>
-          <NavLink href="/products">Products</NavLink>
           <NavLink href="/about">About</NavLink>
           <NavLink href="/contact">Contact</NavLink>
           {isAdmin && (
