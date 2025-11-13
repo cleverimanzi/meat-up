@@ -55,23 +55,22 @@ export default function AddProductPage() {
     setIsLoading(true);
     try {
       await addDoc(collection(db, 'products'), {
-        name: values.name,
-        description: values.description,
-        price: values.price,
-        imageUrl: values.imageUrl,
+        ...values,
         createdAt: serverTimestamp(),
       });
       toast({
         title: 'Product Added',
         description: `${values.name} has been successfully added.`,
       });
-      router.push('/admin');
+      router.push('/admin/manage-products');
     } catch (error: any) {
+      console.error("Error adding product: ", error);
       toast({
         variant: 'destructive',
         title: 'Failed to Add Product',
-        description: error.message || 'An unexpected error occurred.',
+        description: error.message || 'Please check permissions or try again later.',
       });
+    } finally {
       setIsLoading(false);
     }
   }

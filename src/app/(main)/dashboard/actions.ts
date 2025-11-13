@@ -29,11 +29,12 @@ export async function handleMeatSearch(
 
   try {
     const result = await aiProductSearch({ query: validatedFields.data.query });
-    if (result.suggestions && result.suggestions.length > 0) {
+    if (result && result.suggestions && result.suggestions.length > 0) {
       return { suggestions: result.suggestions, error: null };
     }
     return { suggestions: [], error: "We couldn't find any suggestions for your search." };
   } catch (error) {
+    console.error("AI Search Error:", error);
     return {
       suggestions: [],
       error: 'An error occurred while searching. Please try again.',

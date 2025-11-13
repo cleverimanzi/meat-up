@@ -21,7 +21,7 @@ const AIProductSearchInputSchema = z.object({
 export type AIProductSearchInput = z.infer<typeof AIProductSearchInputSchema>;
 
 const AIProductSearchOutputSchema = z.object({
-  suggestions: z.array(z.string()).describe('An array of suggested meat products based on the query.'),
+  suggestions: z.array(z.string()).describe('An array of suggested meat products based on the query. Should be a subset of the available products.'),
 });
 export type AIProductSearchOutput = z.infer<typeof AIProductSearchOutputSchema>;
 
@@ -37,11 +37,10 @@ const productSearchPrompt = ai.definePrompt({
 
   The available products are: ${allProductNames}.
   
-  The user may not know the exact name of the product, so you should use AI to understand their request and suggest relevant products from the available list.
+  The user may not know the exact name of the product, so you should use AI to understand their request and suggest relevant products from the available list. Your suggestions MUST be from this list.
 
   User Query: {{{query}}}
-
-  Suggestions:`,
+`,
 });
 
 const aiProductSearchFlow = ai.defineFlow(
