@@ -15,7 +15,7 @@ export default function WelcomePage() {
   const router = useRouter();
 
   const carouselImages = PlaceHolderImages.filter(p => 
-    ['hero-background', 'beef-steak', 'pork-chops', 'salmon-fillet', 'beef-ribs'].includes(p.id)
+    ['custom-bg-1', 'custom-bg-2', 'custom-bg-3', 'custom-bg-4'].includes(p.id)
   );
 
   useEffect(() => {

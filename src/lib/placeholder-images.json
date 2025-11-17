@@ -135,7 +135,7 @@
     {
       "id": "sirloin-steak",
       "description": "A lean yet tender cut, great for grilling or pan-searing.",
-      "imageUrl": "https://images.unsplash.com/photo-1546964124-4c743847724b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBzaXJsb2luJTIwc3RlYWt8ZW58MHx8fHwxNzY0NTIzNDIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1546964124-4c743847724b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBzaXJsb2luJTIwc3RlYWt8ZW58MHx8fHwxNzY0NTIzNDIwfDA&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "raw sirloin steak"
     },
     {
@@ -147,32 +147,56 @@
     {
       "id": "chicken-thighs",
       "description": "Juicy and flavorful bone-in, skin-on chicken thighs.",
-      "imageUrl": "https://images.unsplash.com/photo-1611933393933-96d53b1e3266?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBjaGlja2VuJTIwdGhpZ2hzfGVufDB8fHx8MTc2NDUyMzQ5MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1611933393933-96d53b1e3266?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBjaGlja2VuJTIwdGhpZ2hzfGVufDB8fHx8MTc2NDUyMzQ5MXww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "raw chicken thighs"
     },
     {
       "id": "pork-ribs",
       "description": "A full rack of pork ribs, ready for your favorite BBQ sauce.",
-      "imageUrl": "https://images.unsplash.com/photo-1622089423594-51e6b5f44203?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBwb3JrJTIwcmlic3xlbnwwfHx8fDE3NjQ1MjM1MjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1622089423594-51e6b5f44203?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBwb3JrJTIwcmlic3xlbnwwfHx8fDE3NjQ1MjM1MjR8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "raw pork ribs"
     },
     {
       "id": "filet-mignon",
       "description": "The most tender cut of beef, exceptionally lean and buttery.",
-      "imageUrl": "https://images.unsplash.com/photo-1618311346571-07a3843b6a9f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBmaWxldCUyMG1pZ25vbnxlbnwwfHx8fDE3NjQ1MjM1NjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1618311346571-07a3843b6a9f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBmaWxldCUyMG1pZ25vbnxlbnwwfHx8fDE3NjQ1MjM1NjF8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "raw filet mignon"
     },
     {
       "id": "ground-lamb",
       "description": "Flavorful ground lamb, perfect for Mediterranean dishes.",
-      "imageUrl": "https://images.unsplash.com/photo-1562967914-01efa7e87832?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncm91bmQlMjBsYW1ifGVufDB8fHx8MTc2NDUyMzU5N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1562967914-01efa7e87832?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncm91bmQlMjBsYW1ifGVufDB8fHx8MTc2NDUyMzU5N3ww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "ground lamb"
     },
     {
       "id": "beef-shank",
       "description": "Ideal for slow cooking, making rich broths, and Osso Buco.",
-      "imageUrl": "https://images.unsplash.com/photo-1598514983145-42f23b28b762?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBiZWVmJTIwc2hhbmt8ZW58MHx8fHwxNzY0NTIzNjMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1598514983145-42f23b28b762?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBiZWVmJTIwc2hhbmt8ZW58MHx8fHwxNzY0NTIzNjMwfDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "raw beef shank"
+    },
+    {
+      "id": "custom-bg-1",
+      "description": "Fresh cuts of meat on a wooden board.",
+      "imageUrl": "https://i.pinimg.com/736x/f7/87/39/f78739d2917a745d70c37b7bb0bc2ecf.jpg",
+      "imageHint": "meat cuts"
+    },
+    {
+      "id": "custom-bg-2",
+      "description": "Steaks cooking on a grill.",
+      "imageUrl": "https://i.pinimg.com/736x/92/3e/f5/923ef5b412dcd302a867cb5295772290.jpg",
+      "imageHint": "grilling steak"
+    },
+    {
+      "id": "custom-bg-3",
+      "description": "Assortment of raw meat products.",
+      "imageUrl": "https://i.pinimg.com/736x/c3/f7/fc/c3f7fccb747270157d7e54098e563199.jpg",
+      "imageHint": "raw meat"
+    },
+    {
+      "id": "custom-bg-4",
+      "description": "A display of various meat cuts in a butcher shop.",
+      "imageUrl": "https://i.pinimg.com/736x/cf/ba/ae/cfbaae414ea9f8d1531ba0bc42748a61.jpg",
+      "imageHint": "butcher display"
     }
   ]
 }
