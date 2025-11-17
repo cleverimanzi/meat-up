@@ -84,14 +84,14 @@ export const products: Product[] = [
     name: 'Turkey Breast',
     description: 'Boneless, skinless turkey breast, a lean and healthy option.',
     price: 15.99,
-    imageUrl: 'https://images.unsplash.com/photo-1596956472466-2d3a39e782b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjB0dXJrZXklMjBicmVhc3R8ZW58MHx8fHwxNzY0MTU0MjYwfDA&ixlib-rb-4.1.0&q=80&w=1080',
+    imageUrl: 'https://images.unsplash.com/photo-1596956472466-2d3a39e782b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjB0dXJrZXklMjBicmVhc3R8ZW58MHx8fHwxNzY0MTU0MjYwfDA&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_13',
     name: 'Duck Breast',
     description: 'Rich and flavorful duck breast with a crispy skin.',
     price: 24.99,
-    imageUrl: 'https://images.unsplash.com/photo-1626202410408-a53825832a26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBkdWNrJTIwYnJlYXN0fGVufDB8fHx8MTc2NDE1NDMwMHww&ixlib-rb-4.1.0&q=80&w=1080',
+    imageUrl: 'https://images.unsplash.com/photo-1626202410408-a53825832a26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBkdWNrJTIwYnJlYXN0fGVufDB8fHx8MTc2NDE1NDMwMHww&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_14',
@@ -112,14 +112,14 @@ export const products: Product[] = [
     name: 'Pork Belly',
     description: 'A fatty, flavorful cut perfect for roasting or braising.',
     price: 13.99,
-    imageUrl: 'https://images.unsplash.com/photo-1533777324565-a04026b24422?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBwb3JrJTIwYmVsbHl8ZW58MHx8fHwxNzY0MTU0NDIyfDA&ixlib-rb-4.1.0&q=80&w=1080',
+    imageUrl: 'https://images.unsplash.com/photo-1533777324565-a04026b24422?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBwb3JrJTIwYmVsbHl8ZW58MHx8fHwxNzY0MTU0NDIyfDA&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_17',
     name: 'Ground Pork',
     description: 'Versatile ground pork for meatballs, sausages, or stir-fries.',
     price: 6.99,
-    imageUrl: 'https://images.unsplash.com/photo-1560963333-5ff89154a20b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncm91bmQlMjBwb3JrfGVufDB8fHx8MTc2NDE1NDQ2MHww&ixlib-rb-4.1.0&q=80&w=1080',
+    imageUrl: 'https://images.unsplash.com/photo-1560963333-5ff89154a20b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncm91bmQlMjBwb3JrfGVufDB8fHx8MTc2NDE1NDQ2MHww&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_18',
@@ -140,7 +140,7 @@ export const products: Product[] = [
     name: 'Chicken Breast',
     description: 'Lean and versatile boneless, skinless chicken breasts.',
     price: 10.99,
-    imageUrl: 'https://images.unsplash.com/photo-1604503468506-a8da13d82791?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBjaGlja2VuJTIwYnJlYXN0fGVufDB8fHx8MTc2NDUyMzM4N3ww&ixlib-rb-4.1.0&q=80&w=1080',
+    imageUrl: 'https://images.unsplash.com/photo-1604503468506-a8da13d82791?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBjaGlja2VuJTIwYnJlYXN0fGVufDB8fHx8MTc2NDUyMzM4N3ww&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_21',
@@ -154,21 +154,21 @@ export const products: Product[] = [
     name: 'Lamb Shoulder',
     description: 'Perfect for slow-roasting, resulting in tender, pull-apart meat.',
     price: 19.99,
-    imageUrl: 'https://images.unsplash.com/photo-1533088912386-d38b050d2388?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBsYW1iJTIwc2hvdWxkZXJ8ZW58MHx8fHwxNzY0NTIzNDU3fDA&ixlib-rb-4.1.0&q=80&w=1080',
+    imageUrl: 'https://images.unsplash.com/photo-1533088912386-d38b050d2388?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBsYW1iJTIwc2hvdWxkZXJ8ZW58MHx8fHwxNzY0NTIzNDU3fDA&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_23',
     name: 'Chicken Thighs',
     description: 'Juicy and flavorful bone-in, skin-on chicken thighs.',
     price: 7.99,
-    imageUrl: 'https://images.unsplash.com/photo-1611933393933-96d53b1e3266?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBjaGlja2VuJTIwdGhpZ2hzfGVufDB8fHx8MTc2NDUyMzQ5MXww&ixlib-rb-4.1.0&q=80&w=1080',
+    imageUrl: 'https://images.unsplash.com/photo-1611933393933-96d53b1e3266?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBjaGlja2VuJTIwdGhpZ2hzfGVufDB8fHx8MTc2NDUyMzQ5MXww&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_24',
     name: 'Pork Ribs',
     description: 'A full rack of pork ribs, ready for your favorite BBQ sauce.',
     price: 15.75,
-    imageUrl: 'https://images.unsplash.com/photo-1622089423594-51e6b5f44203?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBwb3JrJTIwcmlic3xlbnwwfHx8fDE3NjQ1MjM1MjR8MA&ixlib-rb-4.1.0&q=80&w=1080',
+    imageUrl: 'https://images.unsplash.com/photo-1622089423594-51e6b5f44203?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBwb3JrJTIwcmlic3xlbnwwfHx8fDE3NjQ1MjM1MjR8MA&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_25',
@@ -182,14 +182,14 @@ export const products: Product[] = [
     name: 'Ground Lamb',
     description: 'Flavorful ground lamb, perfect for Mediterranean dishes.',
     price: 12.99,
-    imageUrl: 'https://images.unsplash.com/photo-1562967914-01efa7e87832?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncm91bmQlMjBsYW1ifGVufDB8fHx8MTc2NDUyMzU5N3ww&ixlib-rb-4.1.0&q=80&w=1080',
+    imageUrl: 'https://images.unsplash.com/photo-1562967914-01efa7e87832?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncm91bmQlMjBsYW1ifGVufDB8fHx8MTc2NDUyMzU5N3ww&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_27',
     name: 'Beef Shank',
     description: 'Ideal for slow cooking, making rich broths, and Osso Buco.',
     price: 10.50,
-    imageUrl: 'https://images.unsplash.com/photo-1598514983145-42f23b28b762?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBiZWVmJTIwc2hhbmt8ZW58MHx8fHwxNzY0NTIzNjMwfDA&ixlib-rb-4.1.0&q=80&w=1080',
+    imageUrl: 'https://images.unsplash.com/photo-1598514983145-42f23b28b762?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBiZWVmJTIwc2hhbmt8ZW58MHx8fHwxNzY0NTIzNjMwfDA&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_28',
@@ -222,4 +222,6 @@ export const products: Product[] = [
 ];
 
     
+    
+
     
