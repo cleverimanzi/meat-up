@@ -70,28 +70,28 @@ export const products: Product[] = [
     name: 'Pork Sausage Links',
     description: 'Savory and delicious, great for breakfast or grilling.',
     price: 7.49,
-    imageUrl: 'https://images.unsplash.com/photo-1591672842426-17b5b4e29c29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBwb3JrJTIwc2F1c2FnZXxlbnwwfHx8fDE3NjQxNTQxODd8MA&ixlib-rb-4.1.0&q=80&w=1080',
+    imageUrl: 'https://images.unsplash.com/photo-1591672842426-17b5b4e29c29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBwb3JrJTIwc2F1c2FnZXxlbnwwfHx8fDE3NjQxNTQxODd8MA&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_11',
     name: 'Smoked Bacon',
     description: 'Thick-cut, applewood-smoked bacon for a perfect breakfast.',
     price: 9.99,
-    imageUrl: 'https://images.unsplash.com/photo-1628848829983-936b8a8161f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBiYWNvbnxlbnwwfHx8fDE3NjQxNTQyMjN8MA&ixlib-rb-4.1.0&q=80&w=1080',
+    imageUrl: 'https://images.unsplash.com/photo-1628848829983-936b8a8161f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBiYWNvbnxlbnwwfHx8fDE3NjQxNTQyMjN8MA&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_12',
     name: 'Turkey Breast',
     description: 'Boneless, skinless turkey breast, a lean and healthy option.',
     price: 15.99,
-    imageUrl: 'https://images.unsplash.com/photo-1596956472466-2d3a39e782b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjB0dXJrZXklMjBicmVhc3R8ZW58MHx8fHwxNzY0MTU0MjYwfDA&ixlib-rb-4.1.0&q=80&w=1080',
+    imageUrl: 'https://images.unsplash.com/photo-1596956472466-2d3a39e782b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjB0dXJrZXklMjBicmVhc3R8ZW58MHx8fHwxNzY0MTU0MjYwfDA&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_13',
     name: 'Duck Breast',
     description: 'Rich and flavorful duck breast with a crispy skin.',
     price: 24.99,
-    imageUrl: 'https://images.unsplash.com/photo-1626202410408-a53825832a26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBkdWNrJTIwYnJlYXN0fGVufDB8fHx8MTc2NDE1NDMwMHww&ixlib-rb-4.1.0&q=80&w=1080',
+    imageUrl: 'https://images.unsplash.com/photo-1626202410408-a53825832a26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBkdWNrJTIwYnJlYXN0fGVufDB8fHx8MTc2NDE1NDMwMHww&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_14',
@@ -190,5 +190,35 @@ export const products: Product[] = [
     description: 'Ideal for slow cooking, making rich broths, and Osso Buco.',
     price: 10.50,
     imageUrl: 'https://images.unsplash.com/photo-1598514983145-42f23b28b762?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBiZWVmJTIwc2hhbmt8ZW58MHx8fHwxNzY0NTIzNjMwfDA&ixlib-rb-4.1.0&q=80&w=1080',
+  },
+  {
+    id: 'prod_28',
+    name: 'Special Beef Cut',
+    description: 'A premium, hand-selected cut known for its tenderness.',
+    price: 28.50,
+    imageUrl: 'https://i.pinimg.com/1200x/28/ab/d3/28abd31c77ecf18c10b1f8039e9fbd86.jpg',
+  },
+  {
+    id: 'prod_29',
+    name: 'Premium Ground Meat',
+    description: 'A versatile blend of premium ground meat for your recipes.',
+    price: 11.50,
+    imageUrl: 'https://i.pinimg.com/1200x/ce/72/6f/ce726fc3284e250ba456807cc14a9a25.jpg',
+  },
+  {
+    id: 'prod_30',
+    name: 'Gourmet Steak Platter',
+    description: 'An assortment of gourmet steaks for the ultimate meat lover.',
+    price: 45.00,
+    imageUrl: 'https://i.pinimg.com/736x/98/b7/70/98b77060b988e95d213051eb55f452f8.jpg',
+  },
+  {
+    id: 'prod_31',
+    name: 'Assorted Meat Box',
+    description: 'A curated box of various meat cuts, perfect for any occasion.',
+    price: 55.00,
+    imageUrl: 'https://i.pinimg.com/1200x/76/7e/3c/767e3c60507e1955ac2ec0509024fee1.jpg',
   }
 ];
+
+    
