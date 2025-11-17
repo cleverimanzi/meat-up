@@ -63,7 +63,7 @@ export const products: Product[] = [
     name: 'Lamb Chops',
     description: 'Tender and flavorful, perfect for grilling or pan-searing.',
     price: 22.99,
-    imageUrl: 'https://images.unsplash.com/photo-1629515252651-935a8a47511c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBsYW1iJTIwY2hvcHN8ZW58MHx8fHwxNzY0MTU0MTIwfDA&ixlib-rb-4.1.0&q=80&w=1080',
+    imageUrl: 'https://images.unsplash.com/photo-1629515252651-935a8a47511c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBsYW1iJTIwY2hvcHN8ZW58MHx8fHwxNzY0MTU0MTIwfDA&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_10',
@@ -98,7 +98,7 @@ export const products: Product[] = [
     name: 'Beef Brisket',
     description: 'A large cut perfect for smoking or slow cooking.',
     price: 35.50,
-    imageUrl: 'https://images.unsplash.com/photo-1615934322462-cc9b4c05333f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBiZWVmJTIwYnJpc2tldHxlbnwwfHx8fDE3NjQxNTQzNDF8MA&ixlib-rb-4.1.0&q=80&w=1080',
+    imageUrl: 'https://images.unsplash.com/photo-1615934322462-cc9b4c05333f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBiZWVmJTIwYnJpc2tldHxlbnwwfHx8fDE3NjQxNTQzNDF8MA&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_15',
