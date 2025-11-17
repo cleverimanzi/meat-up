@@ -84,14 +84,14 @@ export const products: Product[] = [
     name: 'Turkey Breast',
     description: 'Boneless, skinless turkey breast, a lean and healthy option.',
     price: 15.99,
-    imageUrl: 'https://images.unsplash.com/photo-1596956472466-2d3a39e782b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjB0dXJrZXklMjBicmVhc3R8ZW58MHx8fHwxNzY0MTU0MjYwfDA&ixlib=rb-4.1.0&q=80&w=1080',
+    imageUrl: 'https://images.unsplash.com/photo-1596956472466-2d3a39e782b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjB0dXJrZXklMjBicmVhc3R8ZW58MHx8fHwxNzY0MTU0MjYwfDA&ixlib-rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_13',
     name: 'Duck Breast',
     description: 'Rich and flavorful duck breast with a crispy skin.',
     price: 24.99,
-    imageUrl: 'https://images.unsplash.com/photo-1626202410408-a53825832a26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBkdWNrJTIwYnJlYXN0fGVufDB8fHx8MTc2NDE1NDMwMHww&ixlib=rb-4.1.0&q=80&w=1080',
+    imageUrl: 'https://images.unsplash.com/photo-1626202410408-a53825832a26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYXclMjBkdWNrJTIwYnJlYXN0fGVufDB8fHx8MTc2NDE1NDMwMHww&ixlib-rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'prod_14',
@@ -221,4 +221,5 @@ export const products: Product[] = [
   }
 ];
 
+    
     
