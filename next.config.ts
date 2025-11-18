@@ -40,6 +40,12 @@ const nextConfig: NextConfig = {
         hostname: 'www.pinterest.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'scontent.cdninstagram.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
