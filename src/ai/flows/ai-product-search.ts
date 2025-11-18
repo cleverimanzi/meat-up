@@ -103,7 +103,7 @@ const aiProductSearchFlow = ai.defineFlow(
       }
     });
     
-    const output = llmResponse.output();
+    const output = llmResponse.output;
     if (output) {
         return output;
     }
