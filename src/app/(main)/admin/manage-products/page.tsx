@@ -59,7 +59,7 @@ export default function ManageProductsPage() {
 
   useEffect(() => {
     fetchProducts();
-  }, []);
+  }, [toast]);
 
   const handleDelete = async (productId: string, productName: string) => {
     try {
