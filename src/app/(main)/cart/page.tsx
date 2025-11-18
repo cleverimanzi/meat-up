@@ -67,7 +67,9 @@ export default function CartPage() {
             </div>
             <div className="flex justify-end gap-2">
                 <Button variant="outline" onClick={clearCart}>Clear Cart</Button>
-                <Button>Proceed to Checkout</Button>
+                <Button asChild>
+                  <Link href="/checkout">Proceed to Checkout</Link>
+                </Button>
             </div>
             <p className="text-sm text-muted-foreground text-center">
               Shipping and taxes calculated at checkout.
