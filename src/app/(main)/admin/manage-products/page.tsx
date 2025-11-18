@@ -117,15 +117,15 @@ export default function ManageProductsPage() {
                           </AlertDialogTrigger>
                           <AlertDialogContent>
                             <AlertDialogHeader>
-                              <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+                              <AlertDialogTitle>Are you sure to delete this product?</AlertDialogTitle>
                               <AlertDialogDescription>
                                 This action cannot be undone. This will permanently delete the product
                                 "{product.name}".
                               </AlertDialogDescription>
                             </AlertDialogHeader>
                             <AlertDialogFooter>
-                              <AlertDialogCancel>Cancel</AlertDialogCancel>
-                              <AlertDialogAction onClick={() => handleDelete(product.id, product.name)}>Delete</AlertDialogAction>
+                              <AlertDialogCancel>No</AlertDialogCancel>
+                              <AlertDialogAction onClick={() => handleDelete(product.id, product.name)}>Yes</AlertDialogAction>
                             </AlertDialogFooter>
                           </AlertDialogContent>
                         </AlertDialog>
