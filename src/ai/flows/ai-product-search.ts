@@ -21,7 +21,7 @@ const AIProductSearchInputSchema = z.object({
 export type AIProductSearchInput = z.infer<typeof AIProductSearchInputSchema>;
 
 const AIProductSearchOutputSchema = z.object({
-  suggestions: z.array(z.string()).describe('An array of suggested meat products based on the query. Should be a subset of the available products. If no relevant products are found, return an empty array.'),
+  response: z.string().describe("A helpful, conversational response to the user's query, suggesting specific products from the list. If no relevant products are found, say that you couldn't find any suggestions."),
 });
 export type AIProductSearchOutput = z.infer<typeof AIProductSearchOutputSchema>;
 
@@ -33,13 +33,16 @@ const productSearchPrompt = ai.definePrompt({
   name: 'productSearchPrompt',
   input: {schema: AIProductSearchInputSchema},
   output: {schema: AIProductSearchOutputSchema},
-  prompt: `You are a helpful assistant that suggests meat products based on user queries from a specified list of products.
+  prompt: `You are a friendly and helpful butcher's assistant for an online store called MeatUp. Your goal is to help users find the perfect meat product based on their search query.
 
-  The available products are: ${allProductNames}.
-  
-  The user may not know the exact name of the product, so you should use AI to understand their request and suggest relevant products from the available list. Your suggestions MUST be from this list.
+  You have the following products available: ${allProductNames}.
 
-  If no relevant products are found for the user's query, you MUST return an empty array for the "suggestions" field. Do not make up products.
+  Analyze the user's query and provide a conversational, helpful recommendation from the available product list. Your suggestions MUST be from this list.
+
+  - If the query matches products well (e.g., 'lamb chops'), respond enthusiastically. For example: "Lamb Chops are a fantastic choice! We have tender and flavorful ones ready for you."
+  - If the query is more general (e.g., 'something for the grill'), suggest a few good options. For example: "For the grill, I'd recommend our Prime Ribeye Steak or Thick-Cut Pork Chops. Both are excellent for grilling!"
+  - If no relevant products are found, politely tell the user you couldn't find any suggestions and encourage them to browse the full product list. For example: "I couldn't find any specific suggestions for that, but feel free to browse our full selection of products!"
+  - Always keep the response concise and friendly.
 
   User Query: {{{query}}}
 `,

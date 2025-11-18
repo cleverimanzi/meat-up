@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useActionState } from 'react';
@@ -6,7 +7,7 @@ import { handleMeatSearch } from '@/app/(main)/dashboard/actions';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Loader2, Search } from 'lucide-react';
+import { Loader2, Search, Sparkles } from 'lucide-react';
 
 function SubmitButton() {
   const { pending } = useFormStatus();
@@ -19,7 +20,7 @@ function SubmitButton() {
 }
 
 export default function AiMeatSearch() {
-  const [state, formAction] = useActionState(handleMeatSearch, { suggestions: [], error: null });
+  const [state, formAction] = useActionState(handleMeatSearch, { response: null, error: null });
 
   return (
     <Card>
@@ -41,14 +42,15 @@ export default function AiMeatSearch() {
           <p className="mt-4 text-sm text-destructive">{state.error}</p>
         )}
 
-        {state?.suggestions && state.suggestions.length > 0 && (
+        {state?.response && (
           <div className="mt-6">
-            <h3 className="text-lg font-semibold mb-2">Suggestions for you:</h3>
-            <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
-              {state.suggestions.map((suggestion, index) => (
-                <li key={index}>{suggestion}</li>
-              ))}
-            </ul>
+            <div className="flex items-center gap-2 text-lg font-semibold">
+                <Sparkles className="h-5 w-5 text-primary" />
+                <h3>Our suggestion for you:</h3>
+            </div>
+            <p className="mt-2 text-muted-foreground">
+              {state.response}
+            </p>
           </div>
         )}
       </CardContent>

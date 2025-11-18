@@ -1,3 +1,4 @@
+
 'use server';
 
 import { aiProductSearch } from '@/ai/flows/ai-product-search';
@@ -8,7 +9,7 @@ const searchSchema = z.object({
 });
 
 type SearchState = {
-  suggestions: string[];
+  response: string | null;
   error: string | null;
 };
 
@@ -22,21 +23,21 @@ export async function handleMeatSearch(
 
   if (!validatedFields.success) {
     return {
-      suggestions: [],
+      response: null,
       error: validatedFields.error.flatten().fieldErrors.query?.[0] ?? 'Invalid input.',
     };
   }
 
   try {
     const result = await aiProductSearch({ query: validatedFields.data.query });
-    if (result && result.suggestions && result.suggestions.length > 0) {
-      return { suggestions: result.suggestions, error: null };
+    if (result && result.response) {
+      return { response: result.response, error: null };
     }
-    return { suggestions: [], error: "We couldn't find any suggestions for your search." };
+    return { response: null, error: "We couldn't find any suggestions for your search." };
   } catch (error) {
     console.error("AI Search Error:", error);
     return {
-      suggestions: [],
+      response: null,
       error: 'An error occurred while searching. Please try again.',
     };
   }
