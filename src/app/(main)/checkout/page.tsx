@@ -23,7 +23,7 @@ import {
 import { useToast } from '@/hooks/use-toast';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-import { Loader2 } from 'lucide-react';
+import { Loader2, Smartphone } from 'lucide-react';
 import { useCart } from '@/hooks/use-cart';
 import { useAuth } from '@/hooks/use-auth';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
@@ -35,9 +35,7 @@ const formSchema = z.object({
   address: z.string().min(5, { message: 'Address must be at least 5 characters.' }),
   city: z.string().min(2, { message: 'City must be at least 2 characters.' }),
   zip: z.string().min(5, { message: 'ZIP code must be at least 5 characters.' }),
-  card: z.string().regex(/^\d{16}$/, { message: 'Card number must be 16 digits.' }),
-  expiry: z.string().regex(/^(0[1-9]|1[0-2])\/\d{2}$/, { message: 'Expiry must be in MM/YY format.' }),
-  cvv: z.string().regex(/^\d{3}$/, { message: 'CVV must be 3 digits.' }),
+  phone: z.string().regex(/^(078|079|072|073)\d{7}$/, { message: 'Please enter a valid Rwandan phone number.' }),
 });
 
 export default function CheckoutPage() {
@@ -54,9 +52,7 @@ export default function CheckoutPage() {
       address: '',
       city: '',
       zip: '',
-      card: '',
-      expiry: '',
-      cvv: '',
+      phone: '',
     },
   });
   
@@ -74,23 +70,31 @@ export default function CheckoutPage() {
     }
 
     try {
+      // Simulate sending payment request
+      toast({
+        title: 'Payment Request Sent',
+        description: 'Please check your phone to approve the transaction.',
+      });
+
       const orderData = {
         customerName: values.name,
         customerEmail: user.email,
         customerAddress: `${values.address}, ${values.city}, ${values.zip}`,
+        paymentPhone: values.phone,
         items: cartItems.map(item => ({ id: item.id, name: item.name, quantity: item.quantity, price: item.price })),
         amount: cartTotal,
         date: serverTimestamp(),
+        status: 'pending_payment',
       };
 
+      // We add the order to the database with a "pending" status
       const docRef = await addDoc(collection(db, 'orders'), orderData);
       
+      // We can clear the cart and redirect assuming the user will approve.
+      // In a real app, you'd wait for a webhook confirmation.
       clearCart();
-      toast({
-        title: 'Order Placed!',
-        description: 'Thank you for your purchase.',
-      });
       router.push(`/order-success?orderId=${docRef.id}`);
+
     } catch (error: any) {
       toast({
         variant: 'destructive',
@@ -129,18 +133,17 @@ export default function CheckoutPage() {
                       )} />
                   </div>
                   
-                  <h3 className="font-bold text-lg pt-4 mb-2">Payment Details</h3>
-                  <FormField control={form.control} name="card" render={({ field }) => (
-                    <FormItem><FormLabel>Card Number</FormLabel><FormControl><Input placeholder="•••• •••• •••• ••••" {...field} /></FormControl><FormMessage /></FormItem>
+                  <h3 className="font-bold text-lg pt-4 mb-2 flex items-center gap-2"><Smartphone /> Mobile Money Payment</h3>
+                   <FormField control={form.control} name="phone" render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Your Phone Number</FormLabel>
+                      <FormControl><Input placeholder="078..." {...field} /></FormControl>
+                      <FormMessage />
+                    </FormItem>
                   )} />
-                  <div className="grid grid-cols-2 gap-4">
-                    <FormField control={form.control} name="expiry" render={({ field }) => (
-                      <FormItem><FormLabel>MM/YY</FormLabel><FormControl><Input placeholder="01/25" {...field} /></FormControl><FormMessage /></FormItem>
-                    )} />
-                    <FormField control={form.control} name="cvv" render={({ field }) => (
-                      <FormItem><FormLabel>CVV</FormLabel><FormControl><Input placeholder="123" {...field} /></FormControl><FormMessage /></FormItem>
-                    )} />
-                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    A payment request for **${cartTotal.toFixed(2)} RWF** will be sent to this number. The payment will be made to merchant number **0780104812**.
+                  </p>
 
                   <Button type="submit" className="w-full mt-6" disabled={isLoading}>
                     {isLoading ? <Loader2 className="animate-spin" /> : `Pay $${cartTotal.toFixed(2)}`}
