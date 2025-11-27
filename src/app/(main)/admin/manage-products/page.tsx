@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -26,6 +25,8 @@ import Image from 'next/image';
 export default function ManageProductsPage() {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
+  const [productToDelete, setProductToDelete] = useState<{id: string, name: string} | null>(null);
+  const [isAlertOpen, setIsAlertOpen] = useState(false);
   const { toast } = useToast();
 
   const fetchProducts = async () => {
@@ -59,14 +60,21 @@ export default function ManageProductsPage() {
 
   useEffect(() => {
     fetchProducts();
-  }, [toast]);
+  }, []);
 
-  const handleDelete = async (productId: string, productName: string) => {
+  const handleDeleteClick = (product: {id: string, name: string}) => {
+    setProductToDelete(product);
+    setIsAlertOpen(true);
+  };
+  
+  const confirmDelete = async () => {
+    if (!productToDelete) return;
+
     try {
-      await deleteDoc(doc(db, 'products', productId));
+      await deleteDoc(doc(db, 'products', productToDelete.id));
       toast({
         title: 'Product Deleted',
-        description: `${productName} has been successfully removed.`,
+        description: `${productToDelete.name} has been successfully removed.`,
       });
       fetchProducts(); // Refresh the list after deletion
     } catch (error) {
@@ -75,8 +83,11 @@ export default function ManageProductsPage() {
         title: 'Error',
         description: 'Could not delete product. Please try again.',
       });
+    } finally {
+      setIsAlertOpen(false);
+      setProductToDelete(null);
     }
-  }
+  };
 
   return (
     <div className="container py-8">
@@ -111,24 +122,9 @@ export default function ManageProductsPage() {
                       <TableCell className="font-medium">{product.name}</TableCell>
                       <TableCell>${product.price.toFixed(2)}</TableCell>
                       <TableCell className="text-right">
-                         <AlertDialog>
-                          <AlertDialogTrigger asChild>
-                            <Button variant="destructive" size="sm"><Trash2 className="mr-2 h-4 w-4" /> Delete</Button>
-                          </AlertDialogTrigger>
-                          <AlertDialogContent>
-                            <AlertDialogHeader>
-                              <AlertDialogTitle>Are you sure to delete this product?</AlertDialogTitle>
-                              <AlertDialogDescription>
-                                This action cannot be undone. This will permanently delete the product
-                                "{product.name}".
-                              </AlertDialogDescription>
-                            </AlertDialogHeader>
-                            <AlertDialogFooter>
-                              <AlertDialogCancel>No</AlertDialogCancel>
-                              <AlertDialogAction onClick={() => handleDelete(product.id, product.name)}>Yes</AlertDialogAction>
-                            </AlertDialogFooter>
-                          </AlertDialogContent>
-                        </AlertDialog>
+                         <Button variant="destructive" size="sm" onClick={() => handleDeleteClick({id: product.id, name: product.name})}>
+                           <Trash2 className="mr-2 h-4 w-4" /> Delete
+                         </Button>
                       </TableCell>
                     </TableRow>
                 ))}
@@ -141,6 +137,21 @@ export default function ManageProductsPage() {
           )}
         </CardContent>
       </Card>
+
+      <AlertDialog open={isAlertOpen} onOpenChange={setIsAlertOpen}>
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle>Are you sure to delete this product?</AlertDialogTitle>
+              <AlertDialogDescription>
+                This action cannot be undone. This will permanently delete the product "{productToDelete?.name}".
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel onClick={() => setProductToDelete(null)}>No</AlertDialogCancel>
+              <AlertDialogAction onClick={confirmDelete} className={buttonVariants({ variant: "destructive" })}>Yes</AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
     </div>
   );
 }
