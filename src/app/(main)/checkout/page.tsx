@@ -22,7 +22,7 @@ import {
 } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Loader2, Smartphone } from 'lucide-react';
 import { useCart } from '@/hooks/use-cart';
 import { useAuth } from '@/hooks/use-auth';
@@ -55,10 +55,15 @@ export default function CheckoutPage() {
       phone: '',
     },
   });
+
+  useEffect(() => {
+    if (cartItems.length === 0) {
+      router.replace('/dashboard');
+    }
+  }, [cartItems, router]);
   
   if (cartItems.length === 0) {
-    router.replace('/dashboard');
-    return null;
+    return null; // Render nothing while redirecting
   }
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
