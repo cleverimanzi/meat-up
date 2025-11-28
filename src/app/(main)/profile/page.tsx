@@ -18,7 +18,7 @@ export default function ProfilePage() {
   }
 
   const isJaphet = user.email === 'japhetimanzi@gmail.com';
-  const customImage = 'https://scontent.cdninstagram.com/v/t51.82787-15/575962426_17865298542490056_8201826088818671119_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&ig_cache_key=Mzc2MDQyNjIyNDgzODI3Njg3Mw%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjYzM3g4NTMuc2RyLkMzIn0%3D&_nc_ohc=4VAf84VbqVkQ7kNvwEijy1z&_nc_oc=AdmokpjctSlJjdtvL15XdB2KqCwnZrtPwdnt_PLm5FgKfF0LH_CsjbzvNXxL2bZhe8k&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=-ME8raPIQYfrXqUPs5MsVA&oh=00_Afh44Tq_z62TgcUZOyNAWYp-oA06pzila1rIw3TpnT8Zjw&oe=6921DA22';
+  const customImage = 'https://scontent.fkgl4-2.fna.fbcdn.net/v/t39.30808-6/578528255_122141215502956139_7691644703532553414_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=z9sj0A1xY84Q7kNvwFgX90T&_nc_oc=AdmRPKXqUiLvZfRNZSVa5ipRIDGLh1r1r-SEpPkYdRwFABtavUUA_7LS26kcgRVT5Ag&_nc_zt=23&_nc_ht=scontent.fkgl4-2.fna&_nc_gid=c80FVbkcnPSAAnbnx-xktQ&oh=00_AfjJYubDapwNKMrhJoKImEUquKHbmnYbWQ6VJy9SskIwRA&oe=692F1CE9';
   const photoUrl = isJaphet ? customImage : user.photoURL;
 
   return (
