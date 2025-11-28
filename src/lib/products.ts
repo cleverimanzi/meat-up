@@ -1,5 +1,10 @@
-
 import type { Product } from '@/lib/types';
+import { PlaceHolderImages } from './placeholder-images';
+
+const getImageUrl = (id: string) => {
+  const image = PlaceHolderImages.find(p => p.id === id);
+  return image?.imageUrl || 'https://placehold.co/600x400';
+}
 
 export const products: Product[] = [
   {
@@ -7,203 +12,232 @@ export const products: Product[] = [
     name: 'Prime Ribeye Steak',
     description: 'A well-marbled, juicy, and flavorful cut, perfect for grilling.',
     price: 25.99,
-    imageUrl: 'https://i.pinimg.com/736x/92/3e/f5/923ef5b412dcd302a867cb5295772290.jpg',
+    imageUrl: getImageUrl('t-bone-steak'),
+    category: 'beef'
   },
   {
     id: 'prod_2',
     name: 'Fresh Chicken Wings',
     description: 'Perfect for grilling, frying, or baking with your favorite sauce.',
     price: 8.99,
-    imageUrl: 'https://i.pinimg.com/736x/2b/d8/4c/2bd84c20325f8d672873a214b21695e2.jpg',
+    imageUrl: getImageUrl('chicken-wings'),
+    category: 'chicken'
   },
   {
     id: 'prod_3',
     name: 'Thick-Cut Pork Chops',
     description: 'Juicy, bone-in pork chops that are full of flavor.',
     price: 12.49,
-    imageUrl: 'https://i.pinimg.com/736x/d7/0c/39/d70c395a12a1532824b61214e1a0d33d.jpg',
+    imageUrl: getImageUrl('pork-chops'),
+    category: 'pork'
   },
   {
     id: 'prod_4',
     name: 'Wild-Caught Salmon Fillet',
     description: 'A rich and oily fish, packed with omega-3 fatty acids.',
     price: 18.99,
-    imageUrl: 'https://i.pinimg.com/736x/07/28/68/0728689a7f34c2a41a4d952674cb9a94.jpg',
+    imageUrl: getImageUrl('salmon-fillet'),
+    category: 'fish'
   },
   {
     id: 'prod_5',
     name: 'Raw Whole Chicken',
     description: 'Ideal for a family roast or parting out for various meals.',
     price: 14.99,
-    imageUrl: 'https://i.pinimg.com/736x/a4/4f/3a/a44f3a8f1b63032530a2481e3a6a2d9a.jpg',
+    imageUrl: getImageUrl('whole-chicken'),
+    category: 'chicken'
   },
   {
     id: 'prod_6',
     name: 'Lean Ground Beef',
     description: '90/10 lean ground beef, perfect for burgers, tacos, and meatballs.',
     price: 9.99,
-    imageUrl: 'https://i.pinimg.com/736x/91/99/33/9199331002573b0a03ad46b3896562d9.jpg',
+    imageUrl: getImageUrl('ground-beef'),
+    category: 'beef'
   },
   {
     id: 'prod_7',
     name: 'Beef Short Ribs',
     description: 'Meaty and tender, ideal for braising or slow cooking.',
     price: 17.99,
-    imageUrl: 'https://i.pinimg.com/736x/f7/87/39/f78739d2917a745d70c37b7bb0bc2ecf.jpg',
+    imageUrl: getImageUrl('beef-ribs'),
+    category: 'beef'
   },
   {
     id: 'prod_8',
     name: 'Goat Meat Cubes',
     description: 'Tender goat meat cubes, perfect for stews and curries.',
     price: 16.99,
-    imageUrl: 'https://i.pinimg.com/736x/e4/c7/2b/e4c72b2649b552b02a2455b62b9f39d2.jpg',
+    imageUrl: getImageUrl('goat-meat'),
+    category: 'other'
   },
   {
     id: 'prod_9',
     name: 'Lamb Chops',
     description: 'Tender and flavorful, perfect for grilling or pan-searing.',
     price: 22.99,
-    imageUrl: 'https://i.pinimg.com/736x/0a/7a/10/0a7a10aa51af2470c1e1028711075d95.jpg',
+    imageUrl: getImageUrl('lamb-chops'),
+    category: 'lamb'
   },
   {
     id: 'prod_10',
     name: 'Pork Sausage Links',
     description: 'Savory and delicious, great for breakfast or grilling.',
     price: 7.49,
-    imageUrl: 'https://i.pinimg.com/736x/f3/bb/7b/f3bb7b95f002b8d0034a7428c0397576.jpg',
+    imageUrl: getImageUrl('pork-sausage'),
+    category: 'pork'
   },
   {
     id: 'prod_11',
     name: 'Smoked Bacon',
     description: 'Thick-cut, applewood-smoked bacon for a perfect breakfast.',
     price: 9.99,
-    imageUrl: 'https://i.pinimg.com/736x/3b/a4/09/3ba40989f6f6966f1d24a319e7a96570.jpg',
+    imageUrl: getImageUrl('bacon'),
+    category: 'pork'
   },
   {
     id: 'prod_12',
     name: 'Turkey Breast',
     description: 'Boneless, skinless turkey breast, a lean and healthy option.',
     price: 15.99,
-    imageUrl: 'https://i.pinimg.com/736x/f5/61/52/f56152a92c300890259b36203565e315.jpg',
+    imageUrl: getImageUrl('turkey-breast'),
+    category: 'poultry'
   },
   {
     id: 'prod_13',
     name: 'Duck Breast',
     description: 'Rich and flavorful duck breast with a crispy skin.',
     price: 24.99,
-    imageUrl: 'https://i.pinimg.com/736x/1a/05/c8/1a05c866b445cf545b7e2b10a95572e9.jpg',
+    imageUrl: getImageUrl('duck-breast'),
+    category: 'poultry'
   },
   {
     id: 'prod_14',
     name: 'Beef Brisket',
     description: 'A large cut perfect for smoking or slow cooking.',
     price: 35.50,
-    imageUrl: 'https://i.pinimg.com/736x/5a/0c/b1/5a0cb1b6a4acd9474c153723380d9703.jpg',
+    imageUrl: getImageUrl('beef-brisket'),
+    category: 'beef'
   },
   {
     id: 'prod_15',
     name: 'T-Bone Steak',
     description: 'A classic steak combining a New York strip and a filet.',
     price: 29.99,
-    imageUrl: 'https://i.pinimg.com/736x/92/3e/f5/923ef5b412dcd302a867cb5295772290.jpg',
+    imageUrl: getImageUrl('t-bone-steak'),
+    category: 'beef'
   },
   {
     id: 'prod_16',
     name: 'Pork Belly',
     description: 'A fatty, flavorful cut perfect for roasting or braising.',
     price: 13.99,
-    imageUrl: 'https://i.pinimg.com/736x/53/78/72/53787262490b79374c42023a1a384594.jpg',
+    imageUrl: getImageUrl('pork-belly'),
+    category: 'pork'
   },
   {
     id: 'prod_17',
     name: 'Ground Pork',
     description: 'Versatile ground pork for meatballs, sausages, or stir-fries.',
     price: 6.99,
-    imageUrl: 'https://i.pinimg.com/736x/1e/04/b1/1e04b128c7b889bee9d30083236319e7.jpg',
+    imageUrl: getImageUrl('ground-pork'),
+    category: 'pork'
   },
   {
     id: 'prod_18',
     name: "Cow's Meat",
     description: "Fresh cuts of cow's meat, perfect for stews and slow cooking.",
     price: 11.99,
-    imageUrl: 'https://i.pinimg.com/736x/c3/f7/fc/c3f7fccb747270157d7e54098e563199.jpg',
+    imageUrl: getImageUrl('cows-meat'),
+    category: 'beef'
   },
   {
     id: 'prod_19',
     name: 'Sheep Meat (Mutton)',
     description: 'Rich, flavorful sheep meat, ideal for hearty stews and roasts.',
     price: 14.50,
-    imageUrl: 'https://i.pinimg.com/736x/cf/ba/ae/cfbaae414ea9f8d1531ba0bc42748a61.jpg',
+    imageUrl: getImageUrl('sheep-meat'),
+    category: 'lamb'
   },
   {
     id: 'prod_20',
     name: 'Chicken Breast',
     description: 'Lean and versatile boneless, skinless chicken breasts.',
     price: 10.99,
-    imageUrl: 'https://i.pinimg.com/736x/fe/f3/e6/fef3e648c66a41f02128a3f82226f98a.jpg',
+    imageUrl: getImageUrl('chicken-breast'),
+    category: 'chicken'
   },
   {
     id: 'prod_21',
     name: 'Beef Sirloin Steak',
     description: 'A lean yet tender cut, great for grilling or pan-searing.',
     price: 22.50,
-    imageUrl: 'https://i.pinimg.com/736x/43/d0/22/43d022b7a8a65239a51000b09339a9ba.jpg',
+    imageUrl: getImageUrl('sirloin-steak'),
+    category: 'beef'
   },
   {
     id: 'prod_22',
     name: 'Lamb Shoulder',
     description: 'Perfect for slow-roasting, resulting in tender, pull-apart meat.',
     price: 19.99,
-    imageUrl: 'https://i.pinimg.com/736x/d9/6a/c7/d96ac7b411b01859f71587848695d564.jpg',
+    imageUrl: getImageUrl('lamb-shoulder'),
+    category: 'lamb'
   },
   {
     id: 'prod_23',
     name: 'Chicken Thighs',
     description: 'Juicy and flavorful bone-in, skin-on chicken thighs.',
     price: 7.99,
-    imageUrl: 'https://i.pinimg.com/736x/b2/24/6b/b2246b9a89b02a28153c306a4b1236ea.jpg',
+    imageUrl: getImageUrl('chicken-thighs'),
+    category: 'chicken'
   },
   {
     id: 'prod_24',
     name: 'Pork Ribs',
     description: 'A full rack of pork ribs, ready for your favorite BBQ sauce.',
     price: 15.75,
-    imageUrl: 'https://i.pinimg.com/736x/87/03/48/8703487c53d9e83216892f392265910c.jpg',
+    imageUrl: getImageUrl('pork-ribs'),
+    category: 'pork'
   },
   {
     id: 'prod_25',
     name: 'Filet Mignon',
     description: 'The most tender cut of beef, exceptionally lean and buttery.',
     price: 35.99,
-    imageUrl: 'https://i.pinimg.com/736x/1a/f1/a0/1af1a0740a8310d54a6311e2f7b889d1.jpg',
+    imageUrl: getImageUrl('filet-mignon'),
+    category: 'beef'
   },
   {
     id: 'prod_26',
     name: 'Ground Lamb',
     description: 'Flavorful ground lamb, perfect for Mediterranean dishes.',
     price: 12.99,
-    imageUrl: 'https://i.pinimg.com/736x/21/58/06/2158069507147b4d8f58b0f152d11b33.jpg',
+    imageUrl: getImageUrl('ground-lamb'),
+    category: 'lamb'
   },
   {
     id: 'prod_27',
     name: 'Beef Shank',
     description: 'Ideal for slow cooking, making rich broths, and Osso Buco.',
     price: 10.50,
-    imageUrl: 'https://i.pinimg.com/736x/55/b2/5b/55b25b6515865242b5883d8e57e90b83.jpg',
+    imageUrl: getImageUrl('beef-shank'),
+    category: 'beef'
   },
   {
     id: 'prod_28',
     name: 'Special Beef Cut',
     description: 'A premium, hand-selected cut known for its tenderness.',
     price: 28.50,
-    imageUrl: 'https://i.pinimg.com/1200x/28/ab/d3/28abd31c77ecf18c10b1f8039e9fbd86.jpg',
+    imageUrl: getImageUrl('nahatari-meat'),
+    category: 'beef',
   },
   {
     id: 'prod_29',
     name: 'Premium Ground Meat',
     description: 'A versatile blend of premium ground meat for your recipes.',
     price: 11.50,
-    imageUrl: 'https://i.pinimg.com/1200x/ce/72/6f/ce726fc3284e250ba456807cc14a9a25.jpg',
+    imageUrl: getImageUrl('ground-beef'),
+    category: 'beef',
   },
   {
     id: 'prod_30',
@@ -211,6 +245,7 @@ export const products: Product[] = [
     description: 'An assortment of gourmet steaks for the ultimate meat lover.',
     price: 45.00,
     imageUrl: 'https://i.pinimg.com/736x/98/b7/70/98b77060b988e95d213051eb55f452f8.jpg',
+    category: 'beef'
   },
   {
     id: 'prod_31',
@@ -218,10 +253,6 @@ export const products: Product[] = [
     description: 'A curated box of various meat cuts, perfect for any occasion.',
     price: 55.00,
     imageUrl: 'https://i.pinimg.com/1200x/76/7e/3c/767e3c60507e1955ac2ec0509024fee1.jpg',
+    category: 'mixed'
   }
 ];
-
-    
-    
-
-    

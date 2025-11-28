@@ -25,6 +25,7 @@ const ProductSchema = z.object({
     description: z.string(),
     price: z.number(),
     imageUrl: z.string(),
+    category: z.string(),
 });
 
 const AIProductSearchOutputSchema = z.object({
@@ -41,29 +42,36 @@ export type AIProductSearchOutput = z.infer<typeof AIProductSearchOutputSchema>;
 const productSearchTool = ai.defineTool(
   {
     name: 'productSearch',
-    description: 'Search for meat products in the store catalog based on a user query. The query can be a product name, a characteristic (like "tender" or "spicy"), or a cooking method (like "grill" or "roast").',
-    inputSchema: z.object({ query: z.string() }),
-    outputSchema: z.array(z.object({
-        id: z.string(),
-        name: z.string(),
-        description: z.string(),
-        price: z.number(),
-        imageUrl: z.string(),
-    })),
+    description: 'Search for meat products in the store catalog. You can search by a keyword, or filter by a specific product category.',
+    inputSchema: z.object({ 
+      query: z.string().optional().describe('A general search keyword. Can be a product name, a characteristic (like "tender" or "spicy"), or a cooking method (like "grill" or "roast").'),
+      category: z.string().optional().describe('A specific category to filter by. Available categories are: beef, pork, chicken, lamb, fish, poultry, other.'),
+    }),
+    outputSchema: z.array(ProductSchema),
   },
   async (input) => {
-    console.log('productSearchTool searching for:', input.query);
-    const lowercasedQuery = input.query.toLowerCase();
+    console.log('productSearchTool searching for:', input);
+    let filteredProducts = [...products];
+
+    // Filter by category
+    if (input.category) {
+      filteredProducts = filteredProducts.filter(p => p.category.toLowerCase() === input.category.toLowerCase());
+    }
+
+    // Filter by query string
+    if (input.query) {
+      const lowercasedQuery = input.query.toLowerCase();
+      filteredProducts = filteredProducts.filter(product =>
+          product.name.toLowerCase().includes(lowercasedQuery) ||
+          product.description.toLowerCase().includes(lowercasedQuery) ||
+          lowercasedQuery.split(' ').some(keyword => 
+              product.name.toLowerCase().includes(keyword) || 
+              product.description.toLowerCase().includes(keyword) ||
+              product.category.toLowerCase().includes(keyword)
+          )
+      );
+    }
     
-    // A simple keyword-based search. This can be improved with more advanced search logic.
-    const filteredProducts = products.filter(product =>
-        product.name.toLowerCase().includes(lowercasedQuery) ||
-        product.description.toLowerCase().includes(lowercasedQuery) ||
-        lowercasedQuery.split(' ').some(keyword => 
-            product.name.toLowerCase().includes(keyword) || 
-            product.description.toLowerCase().includes(keyword)
-        )
-    );
     console.log(`Found ${filteredProducts.length} products`);
     return filteredProducts;
   }
@@ -87,12 +95,13 @@ const aiProductSearchFlow = ai.defineFlow(
       prompt: `You are a friendly and helpful butcher's assistant for an online store called MeatUp.
       Your goal is to help users find the perfect meat product based on their search query.
 
-      1. First, you MUST use the productSearch tool to find relevant products based on the user's query.
-      2. Analyze the search results from the tool.
-      3. Based on the products found, formulate a friendly, conversational response. For example: "For the grill, I'd recommend our Prime Ribeye Steak or Thick-Cut Pork Chops. Both are excellent choices!".
-      4. Return both the conversational response AND the array of product objects you found using the tool.
-      5. If the tool returns no products, create a response like "I couldn't find any specific matches for that, but feel free to browse our full selection!" and return an empty array for the products.
-      6. Your final output must strictly follow the required JSON schema with 'response' and 'products' fields.
+      1. First, analyze the user's query to understand their intent. Do they mention a specific type of meat like 'beef' or 'chicken'? If so, use the 'category' parameter in the productSearch tool. Otherwise, use the 'query' parameter for a general search.
+      2. You MUST use the productSearch tool to find relevant products based on the user's query.
+      3. Analyze the search results from the tool.
+      4. Based on the products found, formulate a friendly, conversational response. For example: "For the grill, I'd recommend our Prime Ribeye Steak or Thick-Cut Pork Chops. Both are excellent choices!".
+      5. Return both the conversational response AND the array of product objects you found using the tool.
+      6. If the tool returns no products, create a response like "I couldn't find any specific matches for that, but feel free to browse our full selection!" and return an empty array for the products.
+      7. Your final output must strictly follow the required JSON schema with 'response' and 'products' fields.
 
       User Query: "${query}"`,
       tools: [productSearchTool],

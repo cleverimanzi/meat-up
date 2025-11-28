@@ -22,6 +22,13 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 import { useToast } from '@/hooks/use-toast';
 import { useRouter, useParams } from 'next/navigation';
 import { useState, useEffect } from 'react';
@@ -35,6 +42,7 @@ const formSchema = z.object({
   description: z.string().min(10, { message: 'Description must be at least 10 characters.' }),
   price: z.coerce.number().positive({ message: 'Price must be a positive number.' }),
   imageUrl: z.string().url({ message: 'Please enter a valid image URL.' }),
+  category: z.string().min(1, { message: "Please select a category."})
 });
 
 export default function EditProductPage() {
@@ -52,6 +60,7 @@ export default function EditProductPage() {
       description: '',
       price: 0,
       imageUrl: '',
+      category: '',
     },
   });
 
@@ -65,7 +74,7 @@ export default function EditProductPage() {
         const docSnap = await getDoc(docRef);
 
         if (docSnap.exists()) {
-          const productData = docSnap.data() as Product;
+          const productData = docSnap.data() as Omit<Product, 'id'>;
           form.reset(productData);
         } else {
           toast({ variant: 'destructive', title: 'Error', description: 'Product not found.' });
@@ -154,7 +163,7 @@ export default function EditProductPage() {
                 )}
               />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <FormField
+                 <FormField
                   control={form.control}
                   name="price"
                   render={({ field }) => (
@@ -168,6 +177,34 @@ export default function EditProductPage() {
                   )}
                 />
                  <FormField
+                    control={form.control}
+                    name="category"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Category</FormLabel>
+                        <Select onValueChange={field.onChange} value={field.value}>
+                          <FormControl>
+                            <SelectTrigger>
+                              <SelectValue placeholder="Select a category" />
+                            </SelectTrigger>
+                          </FormControl>
+                          <SelectContent>
+                            <SelectItem value="beef">Beef</SelectItem>
+                            <SelectItem value="pork">Pork</SelectItem>
+                            <SelectItem value="chicken">Chicken</SelectItem>
+                            <SelectItem value="lamb">Lamb</SelectItem>
+                             <SelectItem value="fish">Fish</SelectItem>
+                            <SelectItem value="poultry">Poultry</SelectItem>
+                            <SelectItem value="other">Other</SelectItem>
+                          </SelectContent>
+                        </Select>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+              </div>
+
+               <FormField
                   control={form.control}
                   name="imageUrl"
                   render={({ field }) => (
@@ -183,7 +220,6 @@ export default function EditProductPage() {
                     </FormItem>
                   )}
                 />
-              </div>
 
               <div className="flex justify-end gap-2">
                  <Button type="button" variant="outline" onClick={() => router.push('/admin/manage-products')}>
