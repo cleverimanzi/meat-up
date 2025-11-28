@@ -7,7 +7,7 @@ import type { Product } from '@/lib/types';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Button, buttonVariants } from '@/components/ui/button';
-import { Loader2, Trash2 } from 'lucide-react';
+import { Loader2, Trash2, Edit } from 'lucide-react';
 import {
   AlertDialog,
   AlertDialogAction,
@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/alert-dialog"
 import { useToast } from '@/hooks/use-toast';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 export default function ManageProductsPage() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -27,6 +28,7 @@ export default function ManageProductsPage() {
   const [productToDelete, setProductToDelete] = useState<{id: string, name: string} | null>(null);
   const [isAlertOpen, setIsAlertOpen] = useState(false);
   const { toast } = useToast();
+  const router = useRouter();
 
   const fetchProducts = async () => {
     setLoading(true);
@@ -120,7 +122,10 @@ export default function ManageProductsPage() {
                       </TableCell>
                       <TableCell className="font-medium">{product.name}</TableCell>
                       <TableCell>${product.price.toFixed(2)}</TableCell>
-                      <TableCell className="text-right">
+                      <TableCell className="text-right space-x-2">
+                         <Button variant="outline" size="sm" onClick={() => router.push(`/admin/edit-product/${product.id}`)}>
+                            <Edit className="mr-2 h-4 w-4" /> Edit
+                         </Button>
                          <Button variant="destructive" size="sm" onClick={() => handleDeleteClick({id: product.id, name: product.name})}>
                            <Trash2 className="mr-2 h-4 w-4" /> Delete
                          </Button>

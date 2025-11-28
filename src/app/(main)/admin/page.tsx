@@ -5,7 +5,7 @@ import { collection, getDocs, orderBy, query, limit } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { DollarSign, Package, Users, PlusCircle, Loader2, Settings } from "lucide-react";
+import { DollarSign, Package, Users, PlusCircle, Loader2, Edit, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useRouter } from 'next/navigation';
 
