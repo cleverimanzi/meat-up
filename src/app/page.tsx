@@ -9,6 +9,7 @@ import { useEffect } from 'react';
 import { Loader2 } from 'lucide-react';
 import BackgroundCarousel from '@/components/background-carousel';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import LandingHeader from '@/components/layout/landing-header';
 
 export default function WelcomePage() {
   const { user, loading } = useAuth();
@@ -34,6 +35,7 @@ export default function WelcomePage() {
 
   return (
     <div className="relative h-screen w-full">
+      <LandingHeader />
       <BackgroundCarousel images={carouselImages} />
       <div className="absolute inset-0 bg-black/60" />
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white">
@@ -52,11 +54,8 @@ export default function WelcomePage() {
           ]}
         />
         <div className="mt-8 flex gap-4">
-          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            <Link href="/login">Login</Link>
-          </Button>
-          <Button asChild size="lg" variant="secondary" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-            <Link href="/register">Register</Link>
+          <Button asChild size="lg" variant="secondary" className="bg-white/90 text-secondary-foreground hover:bg-white">
+            <Link href="/dashboard">Browse Products</Link>
           </Button>
         </div>
       </div>
